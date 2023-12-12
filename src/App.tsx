@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 
 // @ts-ignore
 import Home from './components/Home/Home';
+
+import Order from './components/Order/Order';
+
+import Payment from './components/Payment/Payment';
 // @ts-ignore
-// import Ratings from './components/Ratings/Ratings';
+// import Reviews from './components/Reviews/Reviews';
 
 import Menu from './components/Menu/Menu';
 import Categories from './components/Menu/Categories';
@@ -42,9 +46,12 @@ const App: React.FC = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
+
+                <Route path="/order" element={<Order />} />
+                <Route path="/payment" element={<Payment/>}/>
                 {/*<Route path="/menu/" element={ <CardItem  items={menuItems}/>}/>*/}
                 <Route path="/*" element={<Error/>} />
-                {/*<Route path="/Ratings" element={<Ratings />} />*/}
+                {/*<Route path="/Reviews" element={<Reviews />} />*/}
 
             </Routes>
             <Footer/>

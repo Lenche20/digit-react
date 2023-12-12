@@ -21,13 +21,13 @@ figure figcaption {
     /*color: #0000;*/
     color: black;
     padding: .75rem;
-    /*background: var(--c,#0009);*/
+    background: var(--c,#0009);
     clip-path: inset(0 var(--_i,100%) 0 0);
     /*-webkit-mask:*/
     /*        linear-gradient(#000 0 0),*/
     /*        linear-gradient(#000 0 0);*/
     -webkit-mask-composite: xor;
-    /*-webkit-mask-clip: text, padding-box;*/
+    -webkit-mask-clip: text, padding-box;
     /*margin: -1px;*/
 
 }
