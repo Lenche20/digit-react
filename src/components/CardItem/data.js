@@ -67,7 +67,7 @@ const menu = [
         category: 'lunch',
         price: 2500,
         img:
-            'https://ocdn.eu/pulscms-transforms/1/U_fk9kpTURBXy81NGM2MzIxNGE2NTVmYmI2YmU4Njg0MTJkM2QyODQzNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+            'https://unsplash.com/photos/pizza-with-berries-MQUqbmszGGM',
         desc: `Bread and beans or Ewa agoyin is native to the Yoruba people but it is also one of the foods every struggling Nigerian knows well.  `,
     },
     {
@@ -76,7 +76,7 @@ const menu = [
         category: 'dinner',
         price: 1150,
         img:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg/220px-Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg',
+            'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
         desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
     },
 ]

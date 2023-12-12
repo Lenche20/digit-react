@@ -3,7 +3,7 @@ import "./Menu.css"
 
 import CardItem from '../CardItem2/CardItem';
 import Categories from './Categories';
-import items from "../CardItem/data";
+import items from "../CardItem2/data";
 
 type MenuProps = {
     items: {
@@ -59,6 +59,7 @@ const Menu = () => {
                     </div>
                     <Categories categories={categories} filterItems={filterItems} />
                     <CardItem  items={menuItems}/>
+
                 </section>
             </main>
 

@@ -43,7 +43,7 @@ Variables
     --radius: 0.25rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    --max-width: 1170px;
+    --max-width: 120vw;
     --fixed-width: 620px;
 }
 /*
@@ -125,14 +125,16 @@ p {
 
 /* section */
 .section {
-    width: 90vw;
-    margin: 0 auto;
+    /*width: 120vw;*/
+    width: 2000px;
+    /*margin: 0 auto;*/
+    margin-right: 250px;
     max-width: var(--max-width);
 }
 
 @media screen and (min-width: 992px) {
     .section {
-        width: 95vw;
+        width: 100vw;
     }
 }
 
@@ -179,22 +181,24 @@ Menu
     color: var(--clr-white);
 }
 .section-center {
-    width: 90vw;
+    /*width: 100vw;*/
+    width: 1500px;
     margin: 0 auto;
-    max-width: 1170px;
+    /*max-width: 100rem;*/
+    max-width: 1250px;
     display: grid;
-    gap: 3rem 2rem;
+    gap: 7rem 2rem;
     justify-items: center;
 }
 .menu-item {
     display: grid;
-    gap: 1rem 2rem;
-    max-width: 10rem;
+    gap: 2rem 2rem;
+    max-width: 50rem;
 }
 .photo {
     object-fit: cover;
-    height: 200px;
-    width: 100%;
+    height: 90px;
+    width: 80%;
     border: 0.25rem solid var(--clr-gold);
     border-radius: var(--radius);
     display: block;
@@ -215,23 +219,23 @@ Menu
     padding-top: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 620px) {
     .menu-item {
-        grid-template-columns: 225px 1fr;
+        grid-template-columns: 1fr;
         gap: 0 1.25rem;
-        max-width: 40rem;
+        max-width: 50rem;
     }
     .photo {
-        height: 175px;
+        width: 80%;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .section-center {
-        width: 95vw;
+        width: 100vw;
         /*grid-template-columns: 1fr 1fr;*/
         grid-template-columns: repeat(3, 1fr);
     }
     .photo {
-        height: 150px;
+        width: 80%;
     }
 }
