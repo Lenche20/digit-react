@@ -15,9 +15,9 @@ type MenuProps = {
 // @ts-ignore
 // const Menu = ({ items }: MenuProps) =>{
 //
-//    // return <CardItem/>
+//    // return <OrderItem/>
 //    //
-//    //  return {items.map(e => <CardItem title={e.title} description={e.description} />)}
+//    //  return {items.map(e => <OrderItem title={e.title} description={e.description} />)}
 //
 // }
 
