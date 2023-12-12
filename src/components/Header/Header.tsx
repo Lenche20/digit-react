@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css"
 import Menu from '../Menu/Menu';
+
+import Error from '../Error/Error';
 import {Router} from "react-router-dom";
 
 import { Link } from 'react-router-dom';
@@ -13,11 +15,11 @@ const Header: React.FC = () => {
 
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/Menu">Menu</Link>
+                <Link to="/menu">Menu</Link>
 
-                <Link to="/Menu">Order</Link>
-                <Link to="/Menu">Promotions</Link>
-                <Link to="/Menu">About us</Link>
+                <Link to="/error">Order</Link>
+                <Link to="/home">Promotions</Link>
+                <Link to="/home">About us</Link>
 
 
                 <div className="animation start-home"></div>

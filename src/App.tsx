@@ -12,20 +12,23 @@ import Header from './components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footerlence/Footer";
 
+import Error from "./components/Error/Error";
+import "./index.css"
+
 // const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const App: React.FC = () => {
-    const [menuItems, setMenuItems] = useState(items);
-    // const [categories, setCategories] = useState(allCategories);
-
-    const filterItems = (category: string) => {
-        if (category === 'all') {
-            setMenuItems(items);
-            return;
-        }
-        const newItems = items.filter((item) => item.category === category);
-        setMenuItems(newItems);
-    };
+    // const [menuItems, setMenuItems] = useState(items);
+    // // const [categories, setCategories] = useState(allCategories);
+    //
+    // const filterItems = (category: string) => {
+    //     if (category === 'all') {
+    //         setMenuItems(items);
+    //         return;
+    //     }
+    //     const newItems = items.filter((item) => item.category === category);
+    //     setMenuItems(newItems);
+    // };
 
     // @ts-ignore
     // @ts-ignore
@@ -33,14 +36,13 @@ const App: React.FC = () => {
     return (
         <div>
             <Header/>
-            {/*<Routes>*/}
-            {/*    <Route path="/Menu" element={<Menu  items={}/>} />*/}
-            {/*    /!*<Route path="/" element={<Home />} />*!/*/}
-            {/*    /!*<Route path="/Ratings" element={<Ratings />} />*!/*/}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/Error" element={<Error/>} />
+                {/*<Route path="/Ratings" element={<Ratings />} />*/}
 
-            {/*</Routes>*/}
-<Menu/>
-
+            </Routes>
             <Footer/>
         </div>
     );

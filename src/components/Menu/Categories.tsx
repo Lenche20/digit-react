@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./Menu.css"
 // @ts-ignore
 const Categories = ({ categories, filterItems }) => {
     return (
