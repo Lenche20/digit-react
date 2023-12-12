@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// @ts-ignore
+import Home from './components/Home/Home';
+// @ts-ignore
+// import Ratings from './components/Ratings/Ratings';
+
 import Menu from './components/Menu/Menu';
 import Categories from './components/Menu/Categories';
 import items from './components/CardItem/data';
 import Header from './components/Header/Header';
-import Footer from "./components/Footer/Footer";
+import { Route, Routes } from 'react-router-dom';
+import Footer from "./components/Footerlence/Footer";
+
+// const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const App: React.FC = () => {
     const [menuItems, setMenuItems] = useState(items);
+    // const [categories, setCategories] = useState(allCategories);
 
     const filterItems = (category: string) => {
         if (category === 'all') {
@@ -18,23 +27,22 @@ const App: React.FC = () => {
         setMenuItems(newItems);
     };
 
+    // @ts-ignore
+    // @ts-ignore
+    // @ts-ignore
     return (
-        <Router>
-            <div>
-                <Header />
-                <Routes>
-                    {/* Define your routes here */}
-                    {/* Example: <Route path="/menu" element={<MenuComponent />} /> */}
-                </Routes>
+        <div>
+            <Header/>
+            {/*<Routes>*/}
+            {/*    <Route path="/Menu" element={<Menu  items={}/>} />*/}
+            {/*    /!*<Route path="/" element={<Home />} />*!/*/}
+            {/*    /!*<Route path="/Ratings" element={<Ratings />} />*!/*/}
 
-                <main>
-                    {/* Uncomment or add your main content here */}
-                    {/* <Categories categories={categories} filterItems={filterItems} />
-                    <Menu items={menuItems} /> */}
-                </main>
-                <Footer />
-            </div>
-        </Router>
+            {/*</Routes>*/}
+<Menu/>
+
+            <Footer/>
+        </div>
     );
 };
 

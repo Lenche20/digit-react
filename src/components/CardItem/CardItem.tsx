@@ -1,11 +1,7 @@
 import React from "react";
 
-// const Header: React.FC = () => {
-//     // @ts-ignore
-//     // @ts-ignore
-//     // @ts-ignore
-//     return (
-//
+import "./CardItem.css";
+
 const CardItem = ({ items }: { items: Array<{ id: any; title: any; img: any; price: any; desc: any }> }) => {
     return (
         <div className="section-center">

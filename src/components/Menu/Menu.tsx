@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Menu.css"
 
+import CardItem from '../CardItem/CardItem';
+//'/src/components/CardItem/CardItem';
 
 type MenuProps = {
     items: {
@@ -22,10 +24,18 @@ type MenuProps = {
 
 
 
-const Menu: React.FC = () => {
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
+
+const Menu = () => {
+     const menuItems = [
+        {
+            id: 1,
+            title: "Item 1",
+            img: "item1.jpg",
+            price: 10.99,
+            desc: "Description for item 1"
+        },
+
+    ];
     return (
         <>
 
@@ -36,7 +46,7 @@ const Menu: React.FC = () => {
                         <div className="underline"></div>
                     </div>
                     {/*<Categories categories={categories} filterItems={filterItems} />*/}
-                    {/*<Menu />*/}
+                    <CardItem  items={menuItems}/>
                 </section>
             </main>
 
