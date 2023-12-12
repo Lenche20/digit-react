@@ -1,25 +1,25 @@
 import React from "react";
 import "./Header.css"
-import Menu from '../Menu/Menu';
 import {Router} from "react-router-dom";
 
 import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
     return (
         <>
+            <h1>Kao i da se vika restoranot</h1>
 
             <nav>
-                <Link to="/">Home</Link>
                 <Link to="/Menu">Menu</Link>
 
-                <Link to="/Menu">Order</Link>
-                <Link to="/Menu">Promotions</Link>
-                <Link to="/Menu">About us</Link>
+                <Link to="/">Home</Link>
+                <Link to="/Menu">Menu</Link>
+                <Link to="/Menu">Menu</Link>
+                <Link to="/Menu">Menu</Link>
 
 
+                <a href="#">Order</a>
+                <a href="#">Promotions</a>
+                <a href="#">Contact</a>
                 <div className="animation start-home"></div>
             </nav>
         </>
