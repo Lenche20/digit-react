@@ -24,6 +24,6 @@ const Header: React.FC = () => {
             </nav>
         </>
     );
-};
+};// Assuming your CSS file is named footer.css
 
 export default Header;
