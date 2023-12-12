@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     // @ts-ignore
     return (
         <>
-
+        <header>
             <nav>
                 <Link to="/">Home</Link>
                 <Link to="/menu">Menu</Link>
@@ -24,6 +24,7 @@ const Header: React.FC = () => {
 
                 <div className="animation start-home"></div>
             </nav>
+        </header>
         </>
     );
 };// Assuming your CSS file is named footer.css
