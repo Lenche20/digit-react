@@ -13,7 +13,7 @@ import Menu from './components/Menu/Menu';
 import Categories from './components/Menu/Categories';
 import items from './components/CardItem2/data';
 import Header from './components/Header/Header';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footerlence/Footer";
 
 import Error from "./components/Error/Error";
@@ -41,21 +41,18 @@ const App: React.FC = () => {
     // @ts-ignore
     // @ts-ignore
     return (
-        <div>
+        <Router> {/* Wrap your entire application or the relevant part with Router */}
             <Header/>
-            <Routes>
+            <Routes> {/* Define your routes inside Routes component */}
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
-
                 <Route path="/order" element={<Order />} />
                 <Route path="/payment" element={<Payment/>}/>
-                {/*<Route path="/menu/" element={ <CardItem  items={menuItems}/>}/>*/}
                 <Route path="/*" element={<Error/>} />
-                {/*<Route path="/Reviews" element={<Reviews />} />*/}
-
+                {/* ... other routes */}
             </Routes>
             <Footer/>
-        </div>
+        </Router>
     );
 };
 
