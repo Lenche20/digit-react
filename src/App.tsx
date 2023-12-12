@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Menu from './components/Menu/Menu';
+import Categories from './components/Menu/Categories';
+import items from './components/CardItem/data';
+import Header from './components/Header/Header';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// const allCategories = ['all', ...new Set(items.map((item) => item.category))];
+
+const App: React.FC = () => {
+    const [menuItems, setMenuItems] = useState(items);
+    // const [categories, setCategories] = useState(allCategories);
+
+    const filterItems = (category: string) => {
+        if (category === 'all') {
+            setMenuItems(items);
+            return;
+        }
+        const newItems = items.filter((item) => item.category === category);
+        setMenuItems(newItems);
+    };
+
+    return (
+        <div>
+            <Routes>
+                <Route path="/Menu" element={<Header />} />
+                {/* Add other routes here */}
+            </Routes>
+
+            <main>
+                <section className="menu section">
+                    <div className="title">
+                        <h2>our menu</h2>
+                        <div className="underline"></div>
+                    </div>
+                    {/*<Categories categories={categories} filterItems={filterItems} />*/}
+                    {/*<Menu />*/}
+                </section>
+            </main>
+        </div>
+    );
+};
 
 export default App;
