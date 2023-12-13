@@ -27,20 +27,19 @@ article a .icon {
     width: 24px;
     height: 24px;
     margin-left: 5px;
-    transform: translateX(var(--link-icon-translate));
-    opacity: var(--link-icon-opacity);
     transition: all 0.3s;
 }
 
-.btns{
-    fixe-height: 5px;
-}
+/*.btns{*/
+/*    fixed-height: 5px;*/
+/*}*/
 
 
 .order-item {
     width:100% ;
 
     max-width: 1200px;
+    margin: 20px auto;
 }
 
 .order-item-info header {
@@ -48,8 +47,11 @@ article a .icon {
     justify-content: space-between;
     border-bottom: 0.5px dotted var(--clr-grey-5);
 }
-.order-item-info h4 {
+.key-info {
     margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
 }
 .price {
     color: var(--clr-gold);
