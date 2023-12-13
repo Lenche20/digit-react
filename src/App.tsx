@@ -18,7 +18,7 @@ import Footer from "./components/Footerlence/Footer";
 
 import Error from "./components/Error/Error";
 import "./index.css"
-import FoodPopUp from "./components/FoodPopUp/FoodPopUp";
+// import FoodPopUp from "./components/FoodPopUp/FoodPopUp";
 
 // const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
@@ -45,7 +45,6 @@ const App: React.FC = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
-
                 <Route path="/order" element={<Order />} />
                 <Route path="/payment" element={<Payment/>}/>
                 {/*<Route path="/menu/" element={ <OrderItem  items={menuItems}/>}/>*/}

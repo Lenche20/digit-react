@@ -79,4 +79,4 @@ const order = [
         desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
     },
 ]
-export default menu
+export default order

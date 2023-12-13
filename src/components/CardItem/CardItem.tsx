@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardItem.css";
 
-import FoodPopUp from "../FoodPopUp/FoodPopUp";
+// import FoodPopUp from "../FoodPopUp/FoodPopUp";
 // import Modal from 'react-modal';
 
 

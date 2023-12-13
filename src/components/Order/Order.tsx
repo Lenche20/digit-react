@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import "./Order.css"
 
 import OrderItem from '../OrderItem/OrderItem';
-import Categories from './Categories';
+// import Categories from './Categories';
 import order_items from "../OrderItem/data";
 
 type OrderProps = {
@@ -13,7 +13,7 @@ type OrderProps = {
 }
 
 // @ts-ignore
-// const Menu = ({ items }: MenuProps) =>{
+// const Order = ({ items }: OrderProps) =>{
 //
 //    // return <OrderItem/>
 //    //
@@ -22,7 +22,7 @@ type OrderProps = {
 // }
 
 
-const allCategories = ['all', ...new Set(order_items.map((order_item) => order_item.category))];
+// const allCategories = ['all', ...new Set(order_items.map((order_item) => order_item.category))];
 
 const Order = () => {
     // const orderItemsData = [
@@ -37,7 +37,7 @@ const Order = () => {
     //       ];
 
     const [orderItems, setOrderItems] = useState(order_items)
-    const [categories, setCategories] = useState(allCategories)
+    // const [categories, setCategories] = useState(allCategories)
 
     // const filterItems = (category: string) => {
     //     if (category === 'all') {
@@ -57,9 +57,10 @@ const Order = () => {
                         <h2>Your order</h2>
                         <div className="underline"></div>
                     </div>
+                    <span>
                     {/*<Categories categories={categories} filterItems={filterItems} />*/}
-                    <OrderItem  order_items={orderItems}/>
-
+                    <OrderItem order_items={orderItems} />
+</span>
                 </section>
             </main>
 
