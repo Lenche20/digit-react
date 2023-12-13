@@ -1,12 +1,12 @@
 const menu = [
     {
         id: 1,
-        title: 'akara and akamu',
-        category: 'fries',
+        title: 'Hamburger',
+        category: 'burger',
         price: 1500,
         img:
-            'https://imgs.search.brave.com/dYFi9UH-Edhfsc4O7pjF1saJkK4vt80oaTrxo1cEe9E/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9kZWxp/c2gtMTkwNjIwLWFp/ci1mcnllci1zd2Vl/dC1wb3RhdG8tZnJp/ZXMtMDUxOS1sYW5k/c2NhcGUtcGYtMTU2/NDA3MDg0NS5qcGc_/Y3JvcD0xeHc6MC44/NDM1MjgwMTg5NDIz/ODM2eGg7Y2VudGVy/LHRvcCZyZXNpemU9/MTIwMDoq',
-        desc: `Moin-Moin and Akara are both meals made from pureed beans and spicy ingredients, full of proteins, light and refreshing.`,
+            'https://imgur.com/tnrs1cI.jpg',
+        desc: `A Hamburger what is there to discribe about this`,
     },
     {
         id: 2,
