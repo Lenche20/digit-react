@@ -1,12 +1,7 @@
 import React from "react";
 import "./Error.css"
-import Menu from '../Menu/Menu';
-import {Router} from "react-router-dom";
-
-import { Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
 const Error: React.FC = () => {
-    // @ts-ignore
-    // @ts-ignore
     // @ts-ignore
     return (
         <>
@@ -126,7 +121,7 @@ const Error: React.FC = () => {
                                       fill="url(#paint3_linear)"/>
                                 <path id="Vector_34"
                                       d="M578.51 96.4834L578.52 96.4957L578.531 96.5076C583.685 102.221 590.434 111.588 597.797 126.726L597.798 126.73C613.465 158.638 621.544 194.732 621.655 231.32L622.93 650.608L517.93 650.927L516.661 233.319C516.547 195.664 524.762 158.515 541.048 125.774C546.594 114.716 552.917 104.371 559.813 96.561L559.822 96.5507L559.831 96.5402C560.972 95.1742 562.398 94.0744 564.009 93.3179C565.62 92.5615 567.377 92.1667 569.157 92.1613C570.937 92.1559 572.697 92.54 574.312 93.2866C575.928 94.0333 577.361 95.1244 578.51 96.4834Z"
-                                      fill="#EEEEEE" stroke="black" stroke-width="2"/>
+                                      fill="#EEEEEE" stroke="black"/>
                                 <path id="Vector_35"
                                       d="M585.811 142.368H551.971C545.896 142.368 540.971 147.293 540.971 153.368V156.958C540.971 163.034 545.896 167.958 551.971 167.958H585.811C591.886 167.958 596.811 163.034 596.811 156.958V153.368C596.811 147.293 591.886 142.368 585.811 142.368Z"
                                       fill="#535461"/>
@@ -138,9 +133,8 @@ const Error: React.FC = () => {
                         </g>
                     </g>
                     <defs>
-                        <filter id="filter0_d" x="0" y="0" width="1123" height="837" filterUnits="userSpaceOnUse"
-                                color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <filter id="filter0_d" x="0" y="0" width="1123" height="837" filterUnits="userSpaceOnUse">
+                            <feFlood result="BackgroundImageFix"/>
                             <feColorMatrix in="SourceAlpha" type="matrix"
                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                             <feOffset dy="4"/>
@@ -151,25 +145,21 @@ const Error: React.FC = () => {
                         </filter>
                         <linearGradient id="paint0_linear" x1="470.721" y1="674.368" x2="470.721" y2="738.768"
                                         gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E0E0E0"/>
                             <stop offset="0.31" stop-color="#FCCC63"/>
                             <stop offset="0.77" stop-color="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint1_linear" x1="548.051" y1="674.118" x2="548.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E0E0E0"/>
                             <stop offset="0.31" stop-color="#FCCC63"/>
                             <stop offset="0.77" stop-color="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint2_linear" x1="597.051" y1="674.118" x2="597.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E0E0E0"/>
                             <stop offset="0.31" stop-color="#FCCC63"/>
                             <stop offset="0.77" stop-color="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint3_linear" x1="674.051" y1="674.118" x2="674.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E0E0E0"/>
                             <stop offset="0.31" stop-color="#FCCC63"/>
                             <stop offset="0.77" stop-color="#F55F44"/>
                         </linearGradient>
@@ -179,12 +169,12 @@ const Error: React.FC = () => {
             <div className="text">
                 <h1>404 Error</h1>
                 <h2>Couldn't launch :(</h2>
-                <h3>Page Not Found - lets take you <a href="https://twitter.com/namratapdr">BACK</a></h3>
+                <h3>Page Not Found - lets take you <Link to="/">BACK</Link></h3>
             </div>
             </section>
 
         </>
     );
-};// Assuming your CSS file is named footer.css
+};
 
 export default Error;
