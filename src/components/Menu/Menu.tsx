@@ -17,8 +17,7 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const Menu = () => {
 
-
-     const [menuItems, setMenuItems] = useState(items)
+    const [menuItems, setMenuItems] = useState(items)
     const [categories, setCategories] = useState(allCategories)
 
     const filterItems = (category: string) => {
