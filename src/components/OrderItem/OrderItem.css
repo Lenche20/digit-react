@@ -11,28 +11,26 @@ body {
     font-size: 0.875rem;
 }
 
-article a {
-    display: inline-flex;
+article button {
+    /*display: inline-flex;*/
     /*align-items: center;*/
     text-decoration: none;
     color: #28666e;
-    padding: 0 20px;
+    height: 24px;
+    width: 80px;
+    align-items: center;
+    justify-items: center;
+    /*margin-left: 5px;*/
+    margin-bottom: 5px;
+
 }
-article a:hover {
+article button:hover {
     font-size: 15px;
 }
-
-article a .icon {
-    min-width: 24px;
-    width: 24px;
-    height: 24px;
-    margin-left: 5px;
-    transition: all 0.3s;
+.quantity-centar{
+    align-items: center;
+    margin-bottom: 250px
 }
-
-/*.btns{*/
-/*    fixed-height: 5px;*/
-/*}*/
 
 
 .order-item {
@@ -45,10 +43,13 @@ article a .icon {
 .order-item-info header {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+.order-item-info{
+    width: 600px;
+    /*margin-bottom: 20px;*/
 }
 .key-info {
-    margin-bottom: 0.5rem;
+    /*margin-bottom: 5px;*/
     display: flex;
     justify-content: space-between;
 
@@ -56,9 +57,14 @@ article a .icon {
 .price {
     color: var(--clr-gold);
 }
-.order-item-text {
-    margin-bottom: 0;
-    padding-top: 1rem;
+.quantity{
+    margin: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+.order-item-desc {
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 620px) {

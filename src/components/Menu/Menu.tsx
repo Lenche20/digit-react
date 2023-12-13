@@ -13,28 +13,10 @@ type MenuProps = {
 }
 
 // @ts-ignore
-// const Menu = ({ items }: MenuProps) =>{
-//
-//    // return <OrderItem/>
-//    //
-//    //  return {items.map(e => <OrderItem title={e.title} description={e.description} />)}
-//
-// }
-
-
 const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const Menu = () => {
-     // const menuItemsData = [
-     //    {
-     //        id: 1,
-     //        title: "Item 1",
-     //        category: 'dinner',
-     //        price: 10.99,
-     //        img: "item1.jpg",
-     //        desc: "Description for item 1"
-     //    },
-     //       ];
+
 
      const [menuItems, setMenuItems] = useState(items)
     const [categories, setCategories] = useState(allCategories)
@@ -47,7 +29,6 @@ const Menu = () => {
         const newItems = items.filter((item) => item.category === category)
         setMenuItems(newItems)
     }
-    // const categories=[];
     return (
         <>
 
