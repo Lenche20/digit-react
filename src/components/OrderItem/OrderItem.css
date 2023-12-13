@@ -12,8 +12,11 @@ body {
 }
 
 article button {
+
+
     text-decoration: none;
-    color: #28666e;
+    background-color: #222;
+    color: #fff;
     height: 24px;
     width: 80px;
     align-items: center;
@@ -21,14 +24,9 @@ article button {
     /*margin-left: 5px;*/
     margin-bottom: 5px;
     border-radius: 4px;
-font-size: 13px;
-
-
-
-    border: 2px solid transparent; /* Use transparent border to avoid shifting */
-
+    font-size: 13px;
+    border: 2px solid transparent;
     cursor: pointer;
-    /*font-size: 1rem; !* Increase font size for better readability *!*/
     transition: background-color 0.3s, border-color 0.3s;
     flex: 1;
     text-align: center;
