@@ -1,4 +1,4 @@
-const menu = [
+const order = [
     {
         id: 1,
         title: 'akara and akamu',
@@ -80,4 +80,4 @@ const menu = [
         desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
     },
 ]
-export default menu
+export default order

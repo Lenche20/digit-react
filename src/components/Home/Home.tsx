@@ -4,7 +4,7 @@ import {Router} from "react-router-dom";
 
 import { Link } from 'react-router-dom';
 import Categories from "../Menu/Categories";
-import CardItem from "../CardItem2/CardItem";
+import CardItem from "../CardItem/CardItem";
 const Home: React.FC = () => {
     return (
         <>

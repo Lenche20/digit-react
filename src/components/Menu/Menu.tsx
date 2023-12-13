@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import "./Menu.css"
 
-import CardItem from '../CardItem2/CardItem';
+import CardItem from '../CardItem/CardItem';
 import Categories from './Categories';
-import items from "../CardItem2/data";
+import items from "../CardItem/data";
 
 type MenuProps = {
     items: {

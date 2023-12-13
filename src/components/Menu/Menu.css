@@ -194,6 +194,7 @@ Menu Styling Enhancements
 
 .title {
     margin-bottom: var(--content-spacing);
+    margin-top: 50px;
 }
 
 .underline {

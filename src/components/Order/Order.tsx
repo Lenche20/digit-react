@@ -5,7 +5,7 @@ import OrderItem from '../OrderItem/OrderItem';
 import Categories from './Categories';
 import order_items from "../OrderItem/data";
 
-type MenuProps = {
+type OrderProps = {
     order_items: {
         title: string
         description: string
@@ -25,7 +25,7 @@ type MenuProps = {
 const allCategories = ['all', ...new Set(order_items.map((order_item) => order_item.category))];
 
 const Order = () => {
-    // const menuItemsData = [
+    // const orderItemsData = [
     //    {
     //        id: 1,
     //        title: "Item 1",
@@ -41,18 +41,18 @@ const Order = () => {
 
     // const filterItems = (category: string) => {
     //     if (category === 'all') {
-    //         setMenuItems(items)
+    //         setOrderItems(items)
     //         return
     //     }
     //     const newItems = items.filter((item) => item.category === category)
-    //     setMenuItems(newItems)
+    //     setOrderItems(newItems)
     // }
     // const categories=[];
     return (
         <>
 
             <main>
-                <section className="menu section">
+                <section className="order section">
                     <div className="title">
                         <h2>Your order</h2>
                         <div className="underline"></div>

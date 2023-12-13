@@ -11,7 +11,7 @@ import Payment from './components/Payment/Payment';
 
 import Menu from './components/Menu/Menu';
 import Categories from './components/Menu/Categories';
-import items from './components/CardItem2/data';
+import items from './components/CardItem/data';
 import Header from './components/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Footer from "./components/Footerlence/Footer";
@@ -19,7 +19,6 @@ import Footer from "./components/Footerlence/Footer";
 import Error from "./components/Error/Error";
 import "./index.css"
 import FoodPopUp from "./components/FoodPopUp/FoodPopUp";
-import CardItem from "./components/CardItem2/CardItem";
 
 // const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 

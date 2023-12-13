@@ -61,6 +61,6 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #425a52;
+    background: black;
     border-radius: var(--border-radius);
 }
