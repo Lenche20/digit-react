@@ -3,6 +3,7 @@ import "./Order.css"
 
 import OrderItem from '../OrderItem/OrderItem';
 import order_items from "../OrderItem/data";
+import {Link} from "react-router-dom";
 
 type OrderProps = {
     order_items: {
@@ -22,14 +23,11 @@ const Order = () => {
                     <div className="title">
                         <h2>Your order</h2>
                         <div className="underline"></div>
-                       </div>
-                    <button className="btn-form">From</button>
-                        <div>
-                        <a href={"/form"}>Form</a>
                     </div>
-                    <span>
+                    <button className="btn-menu"><Link to="/menu">Browse menu</Link></button>
+                    <button className="btn-form"><Link to="/form">Continue to payment</Link></button>
+
                     <OrderItem order_items={orderItems} />
-</span>
                 </section>
             </main>
 

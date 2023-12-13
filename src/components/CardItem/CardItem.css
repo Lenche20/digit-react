@@ -70,3 +70,9 @@ article {
     outline: 2px solid #c59d5f;
     border: 2px solid #c59d5f;
 }
+.button{
+    width: 150px;
+    height: 43px;
+    align-items: center;
+    justify-items: center;
+}
