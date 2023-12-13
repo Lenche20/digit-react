@@ -162,11 +162,11 @@ a{
     --border-scale: 1;
 }
 
-.btn-form:active {
-    --y: 5%;
-    --scale: 0.9;
-    --border-scale: 0.9, 0.8;
-}
+/*.btn-form:active {*/
+/*    --y: 5%;*/
+/*    --scale: 0.9;*/
+/*    --border-scale: 0.9, 0.8;*/
+/*}*/
 
 .btn-form:before {
     content: "";

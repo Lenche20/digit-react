@@ -90,5 +90,8 @@ article button:hover {
         /*grid-template-columns: 1fr 1fr;*/
         grid-template-columns: repeat(3, 1fr);
     }
-
+}
+.order-item-info hr{
+    /*border: 0.5px solid white;*/
+    border: 0.1px solid white;
 }
