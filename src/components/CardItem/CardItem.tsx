@@ -6,7 +6,8 @@ import "./CardItem.css";
 
 
 const CardItem = ({ items }: { items: Array<{ id: any; title: any; category: any; price: any; img:any; desc: any }> }) => {
-    const openDialog = (item: any) => {
+    const addToOrder = (item: any) => {
+
     };
 
     return (
@@ -17,10 +18,9 @@ const CardItem = ({ items }: { items: Array<{ id: any; title: any; category: any
                         <img src={item.img} //           'https://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto'
                         alt={item.title} />
                         <figcaption>{item.title}
-                            <a className="button" onClick={() => openDialog(item)}>
-                                Find out more
-                                <span className="material-symbols-outlined">arrow_right_alt</span>
-                            </a>
+                            <button className="button" onClick={() => addToOrder(item)}>
+                                Add to order
+                            </button>
                         </figcaption>
                     </figure>
                 </article>

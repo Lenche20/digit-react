@@ -1,7 +1,7 @@
 const menu = [
     {
         id: 1,
-        title: 'Hamburgers',
+        title: 'Hamburger',
         category: 'burgers',
         price: 1500,
         img:
@@ -10,7 +10,7 @@ const menu = [
     },
     {
         id: 2,
-        title: 'Yam and Egg sauce',
+        title: 'Cheeseburger',
         category: 'burgers',
         price: 1700,
         img:
@@ -19,16 +19,16 @@ const menu = [
     },
     {
         id: 3,
-        title: 'suya',
-        category: 'toasts',
+        title: 'Baconburger',
+        category: 'burgers',
         price: 1000,
         img: 'https://imgs.search.brave.com/HgS0j_AFe3k8JQtPVdFN11Y6Q4EkCkQg1IfG7bTkWss/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzc0LzM2Lzcw/LzM2MF9GXzE3NDM2/NzA0NV82aHloN2M4/TWtqdTVRbjFPN21M/UXFtdGZDaFFNZHha/YS5qcGc',
         desc: `This is simply nicely cut beef that is spiced and grilled over an open flame. It is served with fresh cabbage, tomatoes, and onions.`,
     },
     {
         id: 4,
-        title: 'Tea and bread',
-        category: 'sides',
+        title: 'Burgeria',
+        category: 'burgers',
         price: 1200,
         img:
             'https://imgs.search.brave.com/WmM-zASfeParx5V82mGxCb4rAVCmQHuJotuzzVMsJmQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/dGFzdGluZ3RhYmxl/LmNvbS9pbWcvZ2Fs/bGVyeS90aGUtY2xl/dmVyLWhhY2stdG8t/Z2V0LWN1cmx5LWZy/aWVzLXdpdGhvdXQt/YS1zcGlyYWxpemVy/L2ludHJvLTE2NDk2/OTEyOTkuanBn',
@@ -36,7 +36,7 @@ const menu = [
     },
     {
         id: 5,
-        title: 'jollof rice',
+        title: 'Chicken Burger',
         category: 'burgers',
         price: 2500,
         img:
@@ -45,8 +45,8 @@ const menu = [
     },
     {
         id: 6,
-        title: 'ofada rice',
-        category: 'toasts',
+        title: 'Crispy Chicken',
+        category: 'burgers',
         price: 2200,
         img:
             'https://imgs.search.brave.com/syZbg9wXF1Ot4fAB9OiDZQ0Hp2TSAUvs48w68PuJEcM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI1/MDk2NTYwMi9waG90/by9waXp6YS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9NDhQ/N29ZZUVLSXhNS3BC/SC1USDlhOUJqajFT/WUxreUNYMWFudFVV/ZDlPdz0',
@@ -54,8 +54,8 @@ const menu = [
     },
     {
         id: 7,
-        title: 'Indomie and egg',
-        category: 'sides',
+        title: 'Cheese Chicken',
+        category: 'burgers',
         price: 2200,
         img:
             'https://imgs.search.brave.com/7Nerd7j5ynNe3LMqkBBfUIL36A-Z_KyFmH5hyXhTLWs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/MzEyMDcyL3Bob3Rv/L2Jhc2tldC1vZi1m/cmVuY2gtZnJpZXMu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PTdST2ZsWGJEUGpX/UWJVVE1BVGE5MGFs/SVdEaXI2RWFGQnFy/bU1FdVkyeVU9',
@@ -63,8 +63,8 @@ const menu = [
     },
     {
         id: 8,
-        title: 'Bread and Beans',
-        category: 'burgers',
+        title: 'Ham Toast',
+        category: 'toasts',
         price: 2500,
         img:
             'https://ocdn.eu/pulscms-transforms/1/U_fk9kpTURBXy81NGM2MzIxNGE2NTVmYmI2YmU4Njg0MTJkM2QyODQzNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
@@ -72,7 +72,7 @@ const menu = [
     },
     {
         id: 9,
-        title: 'eba and efo riro',
+        title: 'Pepperoni Toast',
         category: 'toasts',
         price: 1150,
         img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
@@ -80,11 +80,116 @@ const menu = [
     },
     {
         id: 10,
-        title: 'cola',
-        category: 'drinks',
+        title: 'Milk Cheese Toast',
+        category: 'toasts',
         price: 1150,
         img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
         desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
     },
+    {
+        id: 11,
+        title: 'Small Fries',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 12,
+        title: 'Medium Fries',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 13,
+        title: 'Large Fries',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 14,
+        title: 'Tomato sauce',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 15,
+        title: 'Curry sauce',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 16,
+        title: 'Burger sauce',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 17,
+        title: 'Hot sauce',
+        category: 'sides',
+        price: 1150,
+        img: 'https://imgs.search.brave.com/FGxMnG3SHJV8irkJtV_3PezwFwR3_vZ_4Lr4ZWW99OE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE2/NDk2NTM3NS9waG90/by9yb2FzdC1kaW5u/ZXIuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTZnaW9zbTla/czdBSFlLd2N2UVNO/ZHg2LTlsWWhnQzJX/YWtVZkpEQ1BnQVE9',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 18,
+        title: 'Coca Cola',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/RzFH4Gg.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 19,
+        title: 'Coca Cola Zero',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/46Sec2L.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 20,
+        title: 'Fanta',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/A7fC8Ba.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 21,
+        title: 'Schweppes',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/u9U9tM6.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 22,
+        title: 'Water',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/5iSEkxB.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+    {
+        id: 23,
+        title: 'Sparkling Water',
+        category: 'drinks',
+        price: 1150,
+        img: 'https://imgur.com/rRNGt6l.jpg',
+        desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+    },
+
 ]
 export default menu

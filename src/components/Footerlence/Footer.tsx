@@ -34,7 +34,7 @@ const Footer = () => {
                     </div>
 
                     <div className="row">
-                        2023 DIGIT - All rights reserved || Designed By: Team 9
+                        2023 DIGIT - All rights reserved © || Designed By: Team 9
                     </div>
                 </div>
             </footer>

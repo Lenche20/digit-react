@@ -64,3 +64,9 @@ article {
     background: black;
     border-radius: var(--border-radius);
 }
+
+.button:hover{
+    color: #c59d5f;
+    outline: 2px solid #c59d5f;
+    border: 2px solid #c59d5f;
+}
