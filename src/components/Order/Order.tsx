@@ -4,6 +4,7 @@ import "./Order.css"
 import OrderItem from '../OrderItem/OrderItem';
 // import Categories from './Categories';
 import order_items from "../OrderItem/data";
+import Form from "../Form/Form";
 
 type OrderProps = {
     order_items: {
@@ -56,6 +57,9 @@ const Order = () => {
                     <div className="title">
                         <h2>Your order</h2>
                         <div className="underline"></div>
+                    </div>
+                    <div>
+                        <a href={"/form"}>forma</a>
                     </div>
                     <span>
                     {/*<Categories categories={categories} filterItems={filterItems} />*/}
