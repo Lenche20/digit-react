@@ -1,61 +1,74 @@
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff3e0;
+
+body{
+    margin:0;
+    overflow-x:hidden;
+    height: 280px;
 }
 
-.footer {
-    background: linear-gradient(45deg, #ffa726, #f44336);
-    color: #fff;
+.footer{
+    background: rgba(255, 255, 255, 0.1);
+    font-family: "Raleway", sans-serif;
+    text-align:center;
+    padding: 50px;
+}
+
+.footer .row{
+    /* width:100%; */
+    margin:10px;
+    padding:0.6% 0;
+    color:gray;
+    font-size:0.8em;
     text-align: center;
-    padding: 30px 0;
-    font-size: 16px;
-    border-top: 5px dashed yellow;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .footer-section {
-    margin: 15px;
-    flex: 1;
-    min-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-.footer-section h3 {
-    color: #fffdd0;
-    margin-bottom: 15px;
-    font-size: 24px;
+.footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
 }
 
-.footer-section p, .footer-section a {
-    color: #fff7e0;
-    line-height: 1.6;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.footer .row a:hover{
+    color:#fff;
 }
 
-.footer-section a:hover {
-    color: #ffd54f;
+.footer .row ul{
+    width:100%;
 }
 
-.social-icons {
-    list-style: none;
-    padding: 0;
+.footer .row ul li{
+    display:inline-block;
+    margin:0 10px;
+
 }
 
-.social-icons li {
-    display: inline;
-    margin: 0 15px;
+.footer .row a i{
+    font-size:2em;
+    margin:0 1%;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
+@media (max-width:720px){
+    .footer{
+        text-align:left;
+        padding:5%;
     }
+    .footer .row ul li{
+        display:block;
+        margin:10px 0;
+        text-align:left;
+    }
+    .footer .row a i{
+        margin:0 3%;
+    }
+}
+
+hr {
+    border: 1px solid #c59d5f;
+    margin-top: 0;
 }
