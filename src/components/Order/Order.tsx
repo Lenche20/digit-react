@@ -15,8 +15,8 @@ const Order = () => {
             <h2>Your Order</h2>
                     <div className="order-underline"></div>
                 </div>
-                <button className="btn-menu"><Link to={'.././menu'}>Menu </Link></button>
-                <button className="btn-form"><Link to={'.././form'}>Continue to payment</Link></button>
+                <Link to={'.././menu'}><button className="btn-menu">Menu</button> </Link>
+                <Link to={'.././form'}><button className="btn-form">Continue to payment</button></Link>
             <ul className="items-list">
                 {selectedItems.map((item:any) => (
                    <li key={item.id}>
@@ -35,6 +35,7 @@ const Order = () => {
                     </li>
                 ))}
             </ul>
+                <div>Total:</div>
             </section>
         </main>
     );

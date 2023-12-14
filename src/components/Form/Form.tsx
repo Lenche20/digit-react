@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Form.css';
+import {Link} from "react-router-dom";
 
 type CartItem = {
     id: number;
@@ -51,7 +52,7 @@ const Form = () => {
     };
 
     // Change payment option handler
-    const handlePaymentOptionChange = (option: 'online' | 'card' | 'cash') => {
+    const handlePaymentOptionChange = (option: 'card' | 'cash') => {
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             paymentOption: option,
@@ -79,45 +80,8 @@ const Form = () => {
         return subtotal + tax + tip + deliveryCharge;
     };
 
-    // Render cart items
-    const renderCartItems = () => {
-        return orderDetails.cartItems.map(item => (
-            <div key={item.id} className="cart-item">
-                <span>{item.name}</span>
-                <div className="quantity-controls">
-                    <button onClick={() => changeItemQuantity(item.id, false)}>-</button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => changeItemQuantity(item.id, true)}>+</button>
-                </div>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
-            </div>
-        ));
-    };
-
-    // Function to change item quantity
-    const changeItemQuantity = (itemId: number, increment: boolean) => {
-        const newCartItems = orderDetails.cartItems.map(item => {
-            if (item.id === itemId) {
-                return { ...item, quantity: increment ? item.quantity + 1 : Math.max(item.quantity - 1, 0) };
-            }
-            return item;
-        }).filter(item => item.quantity > 0); // Remove items with 0 quantity
-
-        setOrderDetails(prevDetails => ({
-            ...prevDetails,
-            cartItems: newCartItems,
-        }));
-    };
-
     return (
         <div className="form-container">
-            <div className="section">
-                <div className="section-header">Your Cart</div>
-                <div className="cart-items">
-                    {renderCartItems()}
-                </div>
-            </div>
-
             <div className="section">
                 <div className="section-header">Delivery Options</div>
                 <div className="radio-group">
@@ -139,12 +103,6 @@ const Form = () => {
             <div className="section">
                 <div className="section-header">Payment Options</div>
                 <div className="radio-group">
-                    <div
-                        className={`radio-option ${orderDetails.paymentOption === 'online' ? 'selected' : ''}`}
-                        onClick={() => handlePaymentOptionChange('online')}
-                    >
-                        Online Payment
-                    </div>
                     <div
                         className={`radio-option ${orderDetails.paymentOption === 'card' ? 'selected' : ''}`}
                         onClick={() => handlePaymentOptionChange('card')}
@@ -188,7 +146,8 @@ const Form = () => {
                     <div>Total</div>
                     <div>${orderDetails.total.toFixed(2)}</div>
                 </div>
-                <button className="proceed-button">Proceed to Payment</button>
+                <button className="proceed-button">Finish ordering</button>
+                <Link to="/order"><button className="proceed-button">Back to ordering</button></Link>
             </div>
         </div>
     );
