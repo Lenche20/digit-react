@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import "./Order.css"
 
 import OrderItem from '../OrderItem/OrderItem';
-import order_items from "../OrderItem/data";
+import order_items from "../OrderItem/order-data";
 import {Link} from "react-router-dom";
 
 type OrderProps = {
