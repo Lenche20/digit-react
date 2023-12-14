@@ -12,15 +12,36 @@ export const useOrderContext = () => {
 export const OrderProvider = ({ children }) => {
     const [selectedItems, setSelectedItems] = useState([]);
 
-    const addToOrder = (item: any) => {
+    const addToOrder = (item:any) => {
         // @ts-ignore
-        setSelectedItems([...selectedItems, item]);
-    };
+        const existingItemIndex = selectedItems.findIndex((selectedItem) => selectedItem.id === item.id);
 
-    const removeFromOrder = (itemId: any) => {
+        if (existingItemIndex !== -1) {
+            const updatedItems = [...selectedItems];
+            // @ts-ignore
+            updatedItems[existingItemIndex] = {
+                // @ts-ignore
+                ...updatedItems[existingItemIndex],
+                // @ts-ignore
+                quantity: updatedItems[existingItemIndex].quantity + 1,
+            };
+            // @ts-ignore
+            setSelectedItems(updatedItems);
+        } else {
+            // @ts-ignore
+            setSelectedItems([...selectedItems, { ...item, quantity: 1 }]);
+        }
+    };
+    const removeFromOrder = (itemId:any) => {
+        const updatedItems = selectedItems.map((selectedItem) =>
+            // @ts-ignore
+            selectedItem.id === itemId
+                // @ts-ignore
+                ? { ...selectedItem, quantity: selectedItem.quantity - 1 }
+                : selectedItem
+        );
         // @ts-ignore
-        const updatedItems = selectedItems.filter((item) => item.id !== itemId);
-        setSelectedItems(updatedItems);
+        setSelectedItems(updatedItems.filter((item) => item.quantity > 0));
     };
 
     const clearOrder = () => {

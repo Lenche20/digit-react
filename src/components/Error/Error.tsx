@@ -145,23 +145,23 @@ const Error: React.FC = () => {
                         </filter>
                         <linearGradient id="paint0_linear" x1="470.721" y1="674.368" x2="470.721" y2="738.768"
                                         gradientUnits="userSpaceOnUse">
-                            <stop offset="0.31" stop-color="#FCCC63"/>
-                            <stop offset="0.77" stop-color="#F55F44"/>
+                            <stop offset="0.31" stopColor="#FCCC63"/>
+                            <stop offset="0.77" stopColor="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint1_linear" x1="548.051" y1="674.118" x2="548.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop offset="0.31" stop-color="#FCCC63"/>
-                            <stop offset="0.77" stop-color="#F55F44"/>
+                            <stop offset="0.31" stopColor="#FCCC63"/>
+                            <stop offset="0.77" stopColor="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint2_linear" x1="597.051" y1="674.118" x2="597.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop offset="0.31" stop-color="#FCCC63"/>
-                            <stop offset="0.77" stop-color="#F55F44"/>
+                            <stop offset="0.31" stopColor="#FCCC63"/>
+                            <stop offset="0.77" stopColor="#F55F44"/>
                         </linearGradient>
                         <linearGradient id="paint3_linear" x1="674.051" y1="674.118" x2="674.051" y2="738.518"
                                         gradientUnits="userSpaceOnUse">
-                            <stop offset="0.31" stop-color="#FCCC63"/>
-                            <stop offset="0.77" stop-color="#F55F44"/>
+                            <stop offset="0.31" stopColor="#FCCC63"/>
+                            <stop offset="0.77" stopColor="#F55F44"/>
                         </linearGradient>
                     </defs>
                 </svg>
