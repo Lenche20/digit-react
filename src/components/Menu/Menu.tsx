@@ -31,10 +31,10 @@ const Menu = () => {
     return (
         <>
 
-            <main>
-                <section className="menu section">
-                    <div className="title">
-                        <h2>our menu</h2>
+            <main className="menu-main">
+                <section className="menu section" >
+                    <div className="title" >
+                        <h2 id="top">our menu</h2>
                         <div className="menu-underline"></div>
                     </div>
                     <Categories categories={categories} filterItems={filterItems} />

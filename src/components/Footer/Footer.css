@@ -68,7 +68,13 @@ body{
     }
 }
 
-hr {
+.hr-part {
     border: 1px solid #c59d5f;
     margin-top: 0;
+}
+.sm-icon{
+    width: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    /*display: ;*/
 }

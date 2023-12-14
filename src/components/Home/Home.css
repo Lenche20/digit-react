@@ -137,3 +137,108 @@ h4 {
         width: 100vw;
     }
 }
+
+
+
+
+.home{
+    background-image: url('https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 765px;
+    image-resolution: from-image;
+}
+.logo{
+    height:100px;
+    width: 100px;
+}
+
+.welcome{
+    width: 900px; /* Set the width to 100% of the viewport width */
+    max-width: 150rem; /* Adjust the maximum width for responsiveness */
+    display: grid;
+    gap: 3rem 2rem;
+    margin: 100px auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+.carousel-part{
+    /*margin-top: 500px;*/
+}
+
+.info{
+    background-image: url('https://imgs.search.brave.com/FIHGX5WdWFw3NULdmfeBO3cQJ_j3-nNWlUkuC2u6jRQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/c291dGhlcm5saXZp/bmcuY29tL3RobWIv/LV9Scmk1dmF2NHR0/aU5qMmFyRGFSTnp2/Ry1nPS8xNTAweDAv/ZmlsdGVyczpub191/cHNjYWxlKCk6bWF4/X2J5dGVzKDE1MDAw/MCk6c3RyaXBfaWNj/KCkvMjc0OTZfTWtp/dEVhc3lfRElHSV80/NF9wcmV2aWV3X3Nj/YWxlXzEwMF9wcGlf/MTUwX3F1YWxpdHlf/MTAwLWNjNGM1Y2M5/MGIxMjQ2NTA4MDZm/NWJhYTYwM2E0ZDQy/LmpwZw');
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-resolution: from-image;
+    align-items: center;
+    justify-items: center;
+
+    margin-top:720px;
+    }
+
+.lokacija{
+    /*width: 1700px; !* Set the width to 100% of the viewport width *!*/
+    /*max-width: 150rem; !* Adjust the maximum width for responsiveness *!*/
+    /*display: grid;*/
+    /*gap: 3rem 2rem;*/
+    background: #c59d5f;
+    height: 300px;
+    margin: 100px auto;
+
+    align-items: center;
+    justify-items: center;
+padding-top: 100px;
+
+}
+
+.text{
+    color: #1c1c1c;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 100px;
+    text-shadow:
+            -1px -1px 0 white, /* Top-left shadow */
+            1px -1px 0 white,  /* Top-right shadow */
+            -1px 1px 0 white,  /* Bottom-left shadow */
+            1px 1px 0 white;
+}
+.btn-menu-view{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid transparent; /* Use transparent border to avoid shifting */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    flex: 1; /* Make buttons flexible to fill space */
+    text-align: center;
+    min-width: 7rem;
+
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 12px 30px;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+margin-bottom: 100px;
+    margin-top: -550px;
+}
+.news-text{
+    font-size: 30px;
+    display: flex;
+    margin-left: 200px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+.news-title{
+    font-size: 20px;
+    display: block;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    color: #c59d5f;
+}
+.part-1{
+    align-items: start;
+    text-align: right;
+}
+
+
+
+
+

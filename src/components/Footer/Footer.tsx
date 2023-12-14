@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     return (
         <>
-            <hr/>
+            <hr className="hr-part"/>
             <footer>
                 <div className="footer">
                     <div className="footer-section">
