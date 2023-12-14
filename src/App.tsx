@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import Home from './components/Home/Home';
 import Order from './components/Order/Order';
-import Payment from './components/Payment/Payment';
 import Form from './components/Form/Form';
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
@@ -20,7 +19,6 @@ const App: React.FC = () => {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/form" element={<Form />} />
-                <Route path="/payment" element={<Payment/>}/>
                 <Route path="/*" element={<Error/>} />
             </Routes>
             <Footer/>

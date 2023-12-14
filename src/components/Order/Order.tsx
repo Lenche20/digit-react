@@ -1,5 +1,6 @@
 import React from 'react';
 import { useOrderContext } from './OrderContext';
+import"./Order.css";
 
 const OrderPage = () => {
     // @ts-ignore
