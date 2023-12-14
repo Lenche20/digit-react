@@ -1,19 +1,7 @@
 /* Reset any default margins and paddings */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ecf0f1;
-    margin-top: 60px; /* Push the body content down by the height of the header */
-    line-height: 1.6;
-    color: #333;
-}
+
+
 
 header {
     position: fixed;

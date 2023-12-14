@@ -35,11 +35,11 @@ const Menu = () => {
                 <section className="menu section">
                     <div className="title">
                         <h2>our menu</h2>
-                        <div className="underline"></div>
+                        <div className="menu-underline"></div>
                     </div>
                     <Categories categories={categories} filterItems={filterItems} />
-                    <CardItem  items={menuItems}/>
 
+                    <CardItem  items={menuItems}/>
                 </section>
             </main>
 

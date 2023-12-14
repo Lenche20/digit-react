@@ -1,11 +1,4 @@
-.section-center {
-    --border-radius: 0.5rem;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --overlay-color: rgba(0, 0, 0, 1.0);
-    --transition-speed: 0.5s;
-    --card-width: 24rem;
-    --card-height: 18rem;
-}
+
 
 figure {
     display: grid;
