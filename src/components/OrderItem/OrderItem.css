@@ -38,7 +38,10 @@ article button:hover {
 }
 .quantity-centar{
     align-items: center;
-    margin-bottom: 250px
+    justify-items: center;
+    margin-bottom: 250px;
+    width: 500px;
+    margin-left: 150px;
 }
 
 

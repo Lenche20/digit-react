@@ -3,7 +3,7 @@ import "./Menu.css"
 
 import CardItem from '../CardItem/CardItem';
 import Categories from './Categories';
-import items from "../CardItem/data";
+import items from "../CardItem/menu-data";
 
 type MenuProps = {
     items: {

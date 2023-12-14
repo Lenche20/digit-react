@@ -94,10 +94,7 @@ h3 {
 h4 {
     font-size: 0.875rem;
 }
-p {
-    margin-bottom: 1.25rem;
-    color: var(--clr-grey-5);
-}
+
 @media screen and (min-width: 800px) {
     h1 {
         font-size: 4rem;
@@ -180,7 +177,7 @@ Menu
 }
 .section-center {
     width: 90vw;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     max-width: 1170px;
     display: grid;
     gap: 3rem 2rem;

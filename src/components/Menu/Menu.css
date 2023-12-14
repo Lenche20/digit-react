@@ -8,7 +8,7 @@ main {
     --fixed-width: 620px;
 
     --section-padding: 4rem;
-    --content-spacing: 1.5rem;
+    /*--content-spacing: 1.5rem;*/
     --button-hover-scale: 1.05;
     --menu-item-spacing: 2rem;
 }
@@ -35,15 +35,12 @@ h2 {
 }
 
 .section {
-    /*width: 120vw;*/
     width: 2000px;
-    /*margin: 0 auto;*/
-    margin-right: 250px;
     max-width: var(--max-width);
 }
 
 @media screen and (min-width: 992px) {
-    .section {
+    .menu {
         width: 100vw;
     }
 }
@@ -57,7 +54,7 @@ h2 {
 }
 
 @media screen and (min-width: 992px) {
-    .section {
+    .menu {
         width: 90vw;
     }
 }

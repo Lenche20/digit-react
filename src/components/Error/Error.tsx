@@ -6,7 +6,7 @@ const Error: React.FC = () => {
     return (
         <>
 
-            <section>
+            <section><span className="error-image">
             <div>
                 <svg width="1123" height="837" viewBox="0 0 1123 837" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="1123" height="837" fill="black"/>
@@ -170,7 +170,7 @@ const Error: React.FC = () => {
                 <h1>404 Error</h1>
                 <h2>Couldn't launch :(</h2>
                 <h3>Page Not Found - lets take you <Link to="/">BACK</Link></h3>
-            </div>
+            </div></span>
             </section>
 
         </>
