@@ -1,26 +1,33 @@
-import React from "react";
-import "./CardItem.css";
+import React from 'react';
+import { useOrderContext } from '../Order/OrderContext';
+import './CardItem.css';
 
-// import FoodPopUp from "../FoodPopUp/FoodPopUp";
-// import Modal from 'react-modal';
-
-
-const CardItem = ({ items }: { items: Array<{ id: any; title: any; category: any; price: any; img:any; desc: any }> }) => {
-    const addToOrder = (item: any) => {
-
-    };
+// @ts-ignore
+const CardItem = ({ items }) => {
+    // @ts-ignore
+    const { addToOrder } = useOrderContext();
 
     return (
         <div className="section-center">
-            {items.map((item) => (
+            {items.map((item:any) => (
                 <article key={item.id} className="menu-item">
                     <figure>
-                        <img src={item.img} //           'https://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto'
-                        alt={item.title} />
-                        <figcaption>{item.title}
-                            <button className="button" onClick={() => addToOrder(item)}>
-                                Add to order
-                            </button>
+                        <img src={item.img} alt={item.title} />
+                        <figcaption>
+                            {item.title}
+                            <p className="itemdesc">{item.desc}</p>
+                            <span className="spanbuttonprice">
+                <button
+                    className="button"
+                    onClick={() => {
+                        addToOrder(item);
+                        alert(`${item.title} successfully added to order!`);
+                    }}
+                >
+                  Add to order
+                </button>
+                <p className="itemprice">{item.price}$</p>
+              </span>
                         </figcaption>
                     </figure>
                 </article>

@@ -1,8 +1,8 @@
 .section-center {
     --border-radius: 0.5rem;
     --shadow-color: rgba(0, 0, 0, 0.2);
-    --overlay-color: rgba(0, 0, 0, 0.5);
-    --transition-speed: 0.4s;
+    --overlay-color: rgba(0, 0, 0, 1.0);
+    --transition-speed: 0.5s;
     --card-width: 24rem;
     --card-height: 18rem;
 }
@@ -24,16 +24,21 @@ figure > * {
 
 figure figcaption {
     display: grid;
-    align-items: end;
+    align-items: start;
     justify-items: start;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
-    color: #fff;
-    padding: 1rem;
+    color: #c59d5f;
+    padding: 5px;
     background: linear-gradient(to top, var(--overlay-color), transparent);
     transform: translateY(100%);
     transition: transform var(--transition-speed);
+    text-shadow:
+            -1px -1px 0 #000, /* Top-left shadow */
+            1px -1px 0 #000,  /* Top-right shadow */
+            -1px 1px 0 #000,  /* Bottom-left shadow */
+            1px 1px 0 #000;
 }
 
 figure:hover figcaption {
@@ -66,8 +71,6 @@ img {
 }
 
 .button:hover{
-    color: #c59d5f;
-    outline: 2px solid #c59d5f;
     border: 2px solid #c59d5f;
 }
 .button{
@@ -75,4 +78,20 @@ img {
     height: 43px;
     align-items: center;
     justify-items: center;
+    outline: 2px solid #c59d5f;
+    color: #c59d5f;
+}
+.itemdesc {
+
+    font-size:12px;
+    color: #c59d5f;
+}
+
+.spanbuttonprice {
+    margin-top: 100px;
+    display: flex;
+}
+
+.itemprice{
+    margin-left: 150px;
 }

@@ -1,38 +1,22 @@
-import React, {useState} from 'react'
-import "./Order.css"
+import React from 'react';
+import { useOrderContext } from './OrderContext';
 
-import OrderItem from '../OrderItem/OrderItem';
-import order_items from "../OrderItem/order-data";
-import {Link} from "react-router-dom";
-
-type OrderProps = {
-    order_items: {
-        title: string
-        description: string
-    }[]
-}
-
-const Order = () => {
-
-    const [orderItems, setOrderItems] = useState(order_items)
+const OrderPage = () => {
+    // @ts-ignore
+    const { selectedItems } = useOrderContext();
 
     return (
-        <>
-            <main>
-                <section className="order section">
-                    <div className="title">
-                        <h2>Your order</h2>
-                        <div className="underline"></div>
-                    </div>
-                    <button className="btn-menu"><Link to="/menu">Browse menu</Link></button>
-                    <button className="btn-form"><Link to="/form">Continue to payment</Link></button>
-
-                    <OrderItem order_items={orderItems} />
-                </section>
-            </main>
-
-        </>
+        <div>
+            <h2>Your Order</h2>
+            <ul>
+                {selectedItems.map((item:any) => (
+                    <li key={item.id}>
+                        {item.title} - ${item.price.toFixed(2)}
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 };
 
-export default Order;
+export default OrderPage;
