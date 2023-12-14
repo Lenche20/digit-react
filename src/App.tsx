@@ -7,7 +7,7 @@ import Form from './components/Form/Form';
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
 import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Footer from "./components/Footerlence/Footer";
+import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
 import "./index.css"
 
