@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Form.css';
-import {Link} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 type CartItem = {
     id: number;
@@ -17,9 +17,17 @@ type OrderDetails = {
     subtotal: number;
     taxRate: number;
     total: number;
+    address: string;
+    cardName: string;
+    cardNumber: string;
+    validThru: string;
+    cvv: string;
 };
 
 const Form = () => {
+    const [, setTipAmount] = useState(0);
+    const location = useLocation();
+    const totalAmountFromOrder = location.state?.totalAmount || 0;
     const [orderDetails, setOrderDetails] = useState<OrderDetails>({
         cartItems: [],
         deliveryOption: 'delivery',
@@ -28,22 +36,23 @@ const Form = () => {
         subtotal: 0,
         taxRate: 0.0875, // 8.75% tax
         total: 0,
+        address: '',
+        cardName: '',
+        cardNumber: '',
+        validThru: '',
+        cvv: '',
     });
 
-    // When any relevant value changes, recalculate the subtotal and total
     useEffect(() => {
-        const newSubtotal = orderDetails.cartItems.reduce(
-            (acc, item) => acc + item.price * item.quantity, 0
-        );
+        const newSubtotal = totalAmountFromOrder;
         const newTotal = calculateTotal(newSubtotal, orderDetails.tipPercentage, orderDetails.taxRate, orderDetails.deliveryOption);
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             subtotal: newSubtotal,
             total: newTotal,
         }));
-    }, [orderDetails.cartItems, orderDetails.tipPercentage, orderDetails.taxRate, orderDetails.deliveryOption]);
+    }, [orderDetails.tipPercentage, orderDetails.taxRate, orderDetails.deliveryOption, totalAmountFromOrder]);
 
-    // Change delivery option handler
     const handleDeliveryOptionChange = (option: 'delivery' | 'pickup') => {
         setOrderDetails(prevDetails => ({
             ...prevDetails,
@@ -51,23 +60,22 @@ const Form = () => {
         }));
     };
 
-    // Change payment option handler
-    const handlePaymentOptionChange = (option: 'card' | 'cash') => {
+    const handlePaymentOptionChange = (option: 'online' | 'card' | 'cash') => {
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             paymentOption: option,
         }));
     };
 
-    // Change tip percentage handler
     const handleTipPercentageChange = (percentage: number) => {
+        const tip = totalAmountFromOrder * (percentage / 100);
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             tipPercentage: percentage,
         }));
+        setTipAmount(tip);
     };
 
-    // Calculate the total cost
     const calculateTotal = (
         subtotal: number,
         tipPercentage: number,
@@ -79,11 +87,14 @@ const Form = () => {
         const tip = subtotal * (tipPercentage / 100);
         return subtotal + tax + tip + deliveryCharge;
     };
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // This makes the scrolling smooth
-        });};
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>, field: keyof OrderDetails) => {
+        setOrderDetails(prevDetails => ({
+            ...prevDetails,
+            [field]: e.target.value,
+        }));
+    };
+
     return (
         <div className="form-container">
             <div className="section">
@@ -104,6 +115,17 @@ const Form = () => {
                 </div>
             </div>
 
+            {orderDetails.deliveryOption === 'delivery' && (
+                <div className="section">
+                    <input
+                        type="text"
+                        placeholder="Address"
+                        value={orderDetails.address}
+                        onChange={(e) => handleInputChange(e, 'address')}
+                    />
+                </div>
+            )}
+
             <div className="section">
                 <div className="section-header">Payment Options</div>
                 <div className="radio-group">
@@ -121,6 +143,35 @@ const Form = () => {
                     </div>
                 </div>
             </div>
+
+            {orderDetails.paymentOption === 'card' && (
+                <div className="section">
+                    <input
+                        type="text"
+                        placeholder="Cardholder Name"
+                        value={orderDetails.cardName}
+                        onChange={(e) => handleInputChange(e, 'cardName')}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Card Number"
+                        value={orderDetails.cardNumber}
+                        onChange={(e) => handleInputChange(e, 'cardNumber')}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Valid Thru MM/YY"
+                        value={orderDetails.validThru}
+                        onChange={(e) => handleInputChange(e, 'validThru')}
+                    />
+                    <input
+                        type="text"
+                        placeholder="CVV"
+                        value={orderDetails.cvv}
+                        onChange={(e) => handleInputChange(e, 'cvv')}
+                    />
+                </div>
+            )}
 
             <div className="section">
                 <div className="section-header">Tip</div>
@@ -140,19 +191,20 @@ const Form = () => {
             <div className="order-summary">
                 <div className="summary-item">
                     <div>Subtotal</div>
-                    <div>${orderDetails.subtotal.toFixed(2)}</div>
+                    <div>${totalAmountFromOrder.toFixed(2)}</div>
                 </div>
                 <div className="summary-item">
-                    <div>Tax</div>
-                    <div>${(orderDetails.subtotal * orderDetails.taxRate).toFixed(2)}</div>
+                    <div>Tip</div>
+                    <div>${((totalAmountFromOrder * orderDetails.tipPercentage)/100).toFixed(2)}</div>
                 </div>
                 <div className="summary-item">
                     <div>Total</div>
-                    <div>${orderDetails.total.toFixed(2)}</div>
+                    <div>${(totalAmountFromOrder+((totalAmountFromOrder * orderDetails.tipPercentage)/100)).toFixed(2)}</div>
                 </div>
                 <button className="proceed-button">Finish ordering</button>
-                <Link to="/order"  onClick={scrollToTop}><button className="proceed-button">Back to ordering</button></Link>
-
+                <Link to="/order">
+                    <button className="proceed-button">Back to ordering</button>
+                </Link>
             </div>
         </div>
     );

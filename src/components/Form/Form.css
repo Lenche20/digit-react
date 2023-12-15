@@ -2,7 +2,7 @@
 /* Assuming your form has a unique class named .form-container */
 .form-container .section,
 .form-container .order-summary{
-    padding-top: 5rem; /* Adjust to your preference */
+    padding-top: 10px; /* Adjust to your preference */
     margin: 0 auto; /* Center the section */
     max-width: var(--fixed-width); /* Override the max-width */
     /* Other styles specific to the form's section */
@@ -42,12 +42,13 @@
 
 .section {
     margin-bottom: 1.5rem;
+    color: #fff;
 }
 
 .section-header {
     font-size: 1.25rem; /* Increase the font size for headers */
     font-weight: bold;
-    color: #c59d5f; /* Use a color that stands out for headers */
+    color: #fff; /* Use a color that stands out for headers */
     padding-bottom: .5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #333; /* Add a border for separation */
@@ -75,6 +76,7 @@
     flex: 1; /* Make buttons flexible to fill space */
     text-align: center;
     min-width: 7rem; /* Set a min-width to ensure buttons are not too small */
+    margin-bottom: 20px;
 }
 
 .radio-option:hover,
@@ -87,6 +89,7 @@
 .button.selected {
     background-color: #c59d5f; /* Highlight color for selected option */
     border-color: #c59d5f;
+    color: #ffffff;
 }
 
 .cart-items,
@@ -151,5 +154,38 @@
         padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
         flex: none; /* Do not stretch in small screens */
         margin-bottom: 0.5rem;
+    }
+}
+/* CSS styles for address and card input fields */
+
+/* Style for the address and card information input fields */
+.form-container input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 0.5rem; /* Comfortable padding */
+    margin-bottom: 1rem; /* Space out elements */
+    border: 1px solid #c59d5f; /* Subtle border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: darkgray; /* White background */
+    font-size: 1rem; /* Readable text size */
+    color: black; /* Dark text for contrast */
+}
+
+/* Placeholder text color */
+.form-container input[type="text"]::placeholder {
+    color: darkslategray; /* Lighter text for placeholders */
+}
+
+/* Input focus style */
+.form-container input[type="text"]:focus {
+    border-color: darkgoldenrod; /* Accent color for focus */
+    outline: none; /* Remove default focus outline */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container input[type="text"] {
+        padding: 0.4rem; /* Slightly less padding on small screens */
+        font-size: 0.9rem; /* Slightly smaller font size */
     }
 }
