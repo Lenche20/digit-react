@@ -56,12 +56,35 @@ const AboutUs = () => {
 
                     </section>
                     <section className="reviews">
-                        <div className="rev1 rev">
+                        <section className="news-part">
+                            <div className="revs-text">Reviews of the resaurant</div><hr/>
+                        </section>
+
+                            <section className="rev">
+
+                        <div className="rev1">
                             <div className="rev-title"> </div>
                             <div className="rev-text"></div>
                             <img src="url" alt="person"/>
 
                         </div>
+                        <div className="rev1">
+                            <div className="rev-title"> </div>
+                            <div className="rev-text"></div>
+                            <img src="url" alt="person"/>
+
+                        </div>
+                        <div className="rev1">
+                            <div className="rev-name">Emily Carter</div>
+
+
+
+
+                            <div className="rev-text"> Rating: 5/5
+                                Review: "Absolutely loved the variety on the menu! The chicken burger was incredibly juicy and flavorful. The staff was super friendly and efficient. Will definitely be coming back for more!"
+                            </div>
+
+                        </div></section>
 
                     </section>
                 </section>

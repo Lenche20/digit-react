@@ -39,7 +39,6 @@ h2 {
     width: auto;
     max-width: var(--max-width);
     transition: var(--transition);
-padding-bottom: 100px;
 
     font-family: "Raleway", sans-serif;
 }
@@ -78,6 +77,12 @@ About
 
 .about {
     padding-top: 80px;
+
+    background-image: url('https://imgs.search.brave.com/cdLxYTbsVsIuDuuBG4CtSoOKTaFZUEN26mVmwanqATo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9ibGFjay1nb2xk/LW1hcmJsZS10ZXh0/dXJlXzIzNjgzNi05/MTc5LmpwZz9zaXpl/PTYyNiZleHQ9anBn');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*height: 765px;*/
+    image-resolution: from-image;
 
 }
 .title {
@@ -159,7 +164,17 @@ width: 400px;
     color: #c59d5f;
 }
 
-
+.values{
+    background: black;
+    margin-top: -20px;
+    /*height: 200px;*/
+    /*margin: 100px auto;*/
+    padding: 50px 150px;
+    align-items: center;
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
 
 .loc-carousel-container {
     /*position: relative;*/
@@ -254,3 +269,41 @@ width: 400px;
     padding-top: 50px;
     color: #c59d5f;
 }
+
+.reviews{
+    background: black;
+    margin-top: -20px;
+    padding: 50px 150px;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 70px;
+}
+
+.rev{ grid-template-columns: 3fr 1fr;
+    display: flex;
+    width: 1200px;
+    margin: 50px auto;
+    align-items: start;
+    justify-items: start;
+}
+.rev1{
+width: 500px;
+    border: 1px solid #ccc; /* Gray border color */
+    border-radius: 5px; /* 5px border radius */
+    padding: 30px;
+    align-items: start;
+    justify-items: left;
+    margin: 0 20px;
+    height: 170px;
+    background-color: #222;
+}
+.revs-text{
+    font-size: 30px;
+    display: flex;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+.rev-name{
+    margin-left: -200px;
+}
+
