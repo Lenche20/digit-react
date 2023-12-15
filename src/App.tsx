@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
 import "./index.css"
 import AboutUs from "./components/AboutUs/AboutUs";
+import Promotions from "./components/Promotions/Promotions";
 
 const App: React.FC = () => {
     return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
                 <Route path="/order" element={<Order />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/about" element={<AboutUs />} />
+                <Route path="/promotions" element={<Promotions />} />
                 <Route path="/*" element={<Error/>} />
             </Routes>
             <Footer/>
