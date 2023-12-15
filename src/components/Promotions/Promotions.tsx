@@ -14,6 +14,32 @@ const Promotions = () => {
 
                     <section className="promo-div">
 
+                       <div><div className="pcontainer">
+                            <div>
+                                <div className="pcontent">
+                                    <h2>Jane Doe</h2>
+                                    <span>UI & UX Designer</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="pcontent">
+                                    <h2>Alex Smith</h2>
+                                    <span>CEO Expert</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="pcontent">
+                                    <h2>Emily New</h2>
+                                    <span>Web Designer</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="ptext">
+                            <p className="pname">Meal Deal Combo</p>  <p className="pprice">$11.99</p>
+                            <div className="desc">Indulge in our Meal Deal Combo featuring a Classic Beef Burger, a serving of medium fries, and a Coca-Cola. </div>
+
+                        </div></div><div>
                         <div className="pcontainer">
                             <div>
                                 <div className="pcontent">
@@ -36,36 +62,10 @@ const Promotions = () => {
 
                         </div>
                         <div className="ptext">
-                            <div className="pname">Meal Deal Combo</div>
-                            <div className="desc">Indulge in our Meal Deal Combo featuring a Classic Beef Burger, a serving of medium fries, and a refreshing Coca-Cola. </div>
-                            <div className="pprice">$11.99</div>
-                        </div>
-                        <div className="pcontainer">
-                            <div>
-                                <div className="pcontent">
-                                    <h2>Jane Doe</h2>
-                                    <span>UI & UX Designer</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="pcontent">
-                                    <h2>Alex Smith</h2>
-                                    <span>CEO Expert</span>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="pcontent">
-                                    <h2>Emily New</h2>
-                                    <span>Web Designer</span>
-                                </div>
-                            </div>
+                            <p className="pname">Meal Deal Combo</p> <p className="pprice">$11.99</p>
+                            <div className="desc">Indulge in our Meal Deal Combo featuring a Classic Beef Burger, a serving of medium fries, and a Coca-Cola. </div>
 
-                        </div>
-                        <div className="ptext">
-                            <div className="pname">Meal Deal Combo</div>
-                            <div className="desc">Indulge in our Meal Deal Combo featuring a Classic Beef Burger, a serving of medium fries, and a refreshing Coca-Cola. </div>
-                            <div className="pprice">$11.99</div>
-                        </div>
+                        </div></div>
                     </section>
                 </section>
             </main>

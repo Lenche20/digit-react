@@ -136,7 +136,7 @@ const Form = () => {
 
     return (
         <div className="form-container">
-            <div className="section">
+            <div className="section ">
                 <div className="section-header">Delivery Options</div>
                 <div className="radio-group">
                     <div

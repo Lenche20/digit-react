@@ -10,6 +10,10 @@
     --section-padding: 50px;
     --button-hover-scale: 1.05;
     --menu-item-spacing: 2rem;
+    background-image: url('https://imgs.search.brave.com/QVXMYwBUK2acfcJFz0dtiJr5PUVG63DqzNg61un3jlg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/YWJzdHJhY3QtYmxh/Y2stdGV4dHVyZS1i/YWNrZ3JvdW5kLWhl/eGFnb25fMjA2NzI1/LTQxMy5qcGc_c2l6/ZT02MjYmZXh0PWpw/Zw');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
 }
 
 .promo {
@@ -40,11 +44,29 @@
     margin-right: auto;
 }
 
+.promo-div{
+    width: 1200px;
+margin: 20px auto;
+    grid-template-columns: 3fr 1fr;
+    display: flex;
 
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+.pname{
+    font-size: 20px;
+    display: flex;
+    margin-left: 20px;
+color: #c59d5f;
+    margin-bottom: 20px;
+}
+.pprice{
+    display: flex;
+    margin-top: -40px;
+    margin-left: 330px;
+    margin-bottom: 20px;
 
-
+}
 .pcontainer {
     width: 100%;
     display: flex;
@@ -122,6 +144,6 @@ span {
 
 
 .ptext{
-    margin-top: 20px;
-    margin-bottom: 50px;
+    width: 400px;
+    margin: 20px auto 50px auto;
 }

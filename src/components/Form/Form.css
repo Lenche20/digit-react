@@ -7,6 +7,9 @@
     max-width: var(--fixed-width); /* Override the max-width */
     /* Other styles specific to the form's section */
 }
+.form-container{
+    padding-top: 90px;
+}
 
 .form-container .order-summary{
     margin-bottom: 7rem; /* Add some space between the form and the summary */
@@ -52,6 +55,7 @@
     padding-bottom: .5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #333; /* Add a border for separation */
+
 }
 
 .radio-group,
