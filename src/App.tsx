@@ -9,6 +9,7 @@ import {BrowserRouter, BrowserRouter as Router, Route, Routes} from 'react-route
 import Footer from "./components/Footer/Footer";
 import Error from "./components/Error/Error";
 import "./index.css"
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/form" element={<Form />} />
+                <Route path="/about" element={<AboutUs />} />
                 <Route path="/*" element={<Error/>} />
             </Routes>
             <Footer/>

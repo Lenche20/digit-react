@@ -47,7 +47,7 @@ svg{
         transform: scale(1);
     }
 }
-.text{
+.error-text{
     opacity: 0;
     animation:appear 1s ease-in forwards;
     animation-delay: 1.8s;

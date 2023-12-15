@@ -2,6 +2,11 @@ import React from "react";
 import "./Error.css"
 import {Link} from "react-router-dom";
 const Error: React.FC = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // This makes the scrolling smooth
+        });};
     // @ts-ignore
     return (
         <>
@@ -166,10 +171,10 @@ const Error: React.FC = () => {
                     </defs>
                 </svg>
             </div>
-            <div className="text">
+            <div className="error-text">
                 <h1>404 Error</h1>
                 <h2>Couldn't launch :(</h2>
-                <h3>Page Not Found - lets take you <Link to="/">BACK</Link></h3>
+                <h3>Page Not Found - lets take you <Link to="/" onClick={scrollToTop}>BACK</Link></h3>
             </div>
             </section>
 

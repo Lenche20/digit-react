@@ -79,7 +79,11 @@ const Form = () => {
         const tip = subtotal * (tipPercentage / 100);
         return subtotal + tax + tip + deliveryCharge;
     };
-
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // This makes the scrolling smooth
+        });};
     return (
         <div className="form-container">
             <div className="section">
@@ -147,7 +151,8 @@ const Form = () => {
                     <div>${orderDetails.total.toFixed(2)}</div>
                 </div>
                 <button className="proceed-button">Finish ordering</button>
-                <Link to="/order"><button className="proceed-button">Back to ordering</button></Link>
+                <Link to="/order"  onClick={scrollToTop}><button className="proceed-button">Back to ordering</button></Link>
+
             </div>
         </div>
     );
