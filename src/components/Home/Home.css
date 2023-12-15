@@ -161,10 +161,41 @@ h4 {
     background-repeat: no-repeat;
     height: 765px;
     image-resolution: from-image;
+    padding-top: 40px;
 }
-.logo{
-    height:100px;
-    width: 100px;
+
+/* This centers the children within the parent vertically and horizontally */
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Center the logo image and adjust its size */
+.logo {
+    max-width: 100%; /* Ensures the image is responsive */
+    width: 40rem; /* Adjust width as necessary, maintaining aspect ratio */
+    height: 40rem; /* Maintain aspect ratio */
+    margin-right: 50px;
+}
+
+/* Specifically target the last div child with the slogan text */
+.parent > div:last-child {
+    color: #555; /* A more muted color for the text */
+    font-size: 1.25rem; /* A suitable text size for readability */
+    font-weight: 600; /* Slightly bolder text for emphasis */
+    letter-spacing: 1px; /* Space out the letters a little for a high-end feel */
+    margin-top: 1rem; /* Space above the text */
+    margin-bottom: 2rem; /* Space below the text */
+    background: rgba(255, 255, 255, 0.85); /* A subtle white background for the text */
+    padding: 0.5rem 1rem; /* Padding around the text */
+    border-radius: 15px; /* Rounded corners for a soft, modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A light shadow for depth */
+    max-width: fit-content; /* Fit the background closely to the text size */
+    border: 1px solid #d4af37; /* A border to match the logo color */
 }
 
 .welcome{
