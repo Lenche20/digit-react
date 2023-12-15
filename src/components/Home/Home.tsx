@@ -15,7 +15,7 @@ const Home: React.FC = () => {
                 <section className="home">
                     <div className="parent">
                         <img className="logo" src="https://i.ibb.co/9Gp1nKq/logo.png" alt="Burgermania"/>
-                        <div>Skopje's finest burger house</div>
+                        <div>Skopje's Finest Burger House</div>
                     </div>
                 </section>
                 <section className="news-part">
