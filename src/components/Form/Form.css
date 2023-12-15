@@ -42,12 +42,13 @@
 
 .section {
     margin-bottom: 1.5rem;
+    color: #fff;
 }
 
 .section-header {
     font-size: 1.25rem; /* Increase the font size for headers */
     font-weight: bold;
-    color: #c59d5f; /* Use a color that stands out for headers */
+    color: #fff; /* Use a color that stands out for headers */
     padding-bottom: .5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #333; /* Add a border for separation */
