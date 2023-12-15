@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Form.css';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 type CartItem = {
     id: number;
@@ -20,6 +20,9 @@ type OrderDetails = {
 };
 
 const Form = () => {
+    const [,setTipAmount] = useState(0);
+    const location = useLocation();
+    const totalAmountFromOrder = location.state?.totalAmount || 0;
     const [orderDetails, setOrderDetails] = useState<OrderDetails>({
         cartItems: [],
         deliveryOption: 'delivery',
@@ -61,10 +64,12 @@ const Form = () => {
 
     // Change tip percentage handler
     const handleTipPercentageChange = (percentage: number) => {
+        const tip = orderDetails.subtotal * (percentage / 100);
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             tipPercentage: percentage,
         }));
+        setTipAmount(tip);
     };
 
     // Calculate the total cost
@@ -136,18 +141,20 @@ const Form = () => {
             <div className="order-summary">
                 <div className="summary-item">
                     <div>Subtotal</div>
-                    <div>${orderDetails.subtotal.toFixed(2)}</div>
+                    <div>${totalAmountFromOrder.toFixed(2)}</div>
                 </div>
                 <div className="summary-item">
-                    <div>Tax</div>
-                    <div>${(orderDetails.subtotal * orderDetails.taxRate).toFixed(2)}</div>
+                    <div>Tip</div>
+                    <div>${((totalAmountFromOrder * orderDetails.tipPercentage)/100).toFixed(2)}</div>
                 </div>
                 <div className="summary-item">
                     <div>Total</div>
-                    <div>${orderDetails.total.toFixed(2)}</div>
+                    <div>${(totalAmountFromOrder+((totalAmountFromOrder * orderDetails.tipPercentage)/100)).toFixed(2)}</div>
                 </div>
                 <button className="proceed-button">Finish ordering</button>
-                <Link to="/order"><button className="proceed-button">Back to ordering</button></Link>
+                <Link to="/order">
+                    <button className="proceed-button">Back to ordering</button>
+                </Link>
             </div>
         </div>
     );
