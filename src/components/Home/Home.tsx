@@ -13,18 +13,14 @@ const Home: React.FC = () => {
         <>
             <main className="home-main">
                 <section className="home">
-                    <div className="title">
-                        <h2>Burgeria</h2>
-                        <div className="home-underline"></div>
+                    <div className="parent">
+                        <img className="logo" src="https://i.ibb.co/9Gp1nKq/logo.png" alt="Burgermania"/>
+                        <div>Skopje's finest burger house</div>
                     </div>
-                    <div>
-                        <img className="logo" src="https://imgs.search.brave.com/oUacXwuXIuPH4wEVxh2BrF-grNHkt7RbJz1g1lZV11k/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzk2LzUyLzIz/LzM2MF9GXzM5NjUy/MjM1OV95UDB3T0lV/Z21ONWlYMExmR0VE/QUJMcTY1UHphRkZ0/NC5qcGc" alt="Burgermania"/>
-                    <div>Best Burger in Skopje</div>
-                    </div>
-
                 </section>
                 <section className="news-part">
-                    <div className="news-text">News and Updates</div><hr/>
+                    <div className="news-text">News and Updates</div>
+                    <hr/>
                 </section>
                 <section className="welcome">
                     <div className="part-1">
