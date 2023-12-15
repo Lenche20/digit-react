@@ -14,6 +14,29 @@ type MenuProps = {
 // @ts-ignore
 const AboutUs = () => {
 
+    const reviews = [
+        {
+            name: "Ivan Petrovski",
+            rating: "4/5",
+            review: "The restaurant has a cozy ambiance, and the meat dishes are really delicious! I particularly enjoyed the steak."
+        },
+        {
+            name: "Elena Stojanovska",
+            rating: "5/5",
+            review: "Decent place for meat lovers. The barbecue platter was amazing, and the service was great also."
+        },
+        {
+            name: "Nikola Dimitrov",
+            rating: "5/5",
+            review: "Outstanding experience! The ribs here are fantastic, and the service is top-notch. I'll definitely be back."
+        },
+        {
+            name: "Ana Petrovska",
+            rating: "4/5",
+            review: "The restaurant has a wonderful ambiance, and their grilled chicken is mouthwatering! I'd definitely recommend it."
+        },
+        // Add more reviews as needed
+    ];
     return (
         <>
 
@@ -44,48 +67,43 @@ const AboutUs = () => {
                         <div className="miss-text">At Burgeria, our mission is to serve flavorful, high-quality meals prepared with care and creativity. We strive to exceed expectations by delivering exceptional service and creating a welcoming atmosphere for our customers. We are dedicated to fostering community connections and making a positive impact by offering delicious food made from the freshest ingredients while maintaining our commitment to sustainability and customer satisfaction.</div>
 
                     </section>
-                    <br/>
 
                     <section className="values">
-
-                        <div className="values-title">VALUES</div>
-                        <section className="values-text">
-                            <div className="val-1 val"><div className="val-title">Quality Ingredients</div> We prioritize using fresh, locally sourced ingredients to create delicious and wholesome meals for our customers.</div>
-                            <div className="val-2 val"><div className="val-title">Exceptional Service</div> We are committed to providing friendly, efficient, and personalized service to ensure every customer has a delight. </div>
-                            <div className="val-3 val"><div className="val-title">Community Engagement </div>We actively support and engage with our local community through various initiatives, partnerships, and events.</div> </section>
-
+                        <h2 className="values-title">VALUES</h2>
+                        <div className="values-container">
+                            <div className="value-card">
+                                <h3 className="value-title">Quality Ingredients</h3>
+                                <p>We prioritize using fresh, locally sourced ingredients to create delicious and
+                                    wholesome meals for our customers.</p>
+                            </div>
+                            <div className="value-card">
+                                <h3 className="value-title">Exceptional Service</h3>
+                                <p>We are committed to providing friendly, efficient, and personalized service to ensure
+                                    every customer has a delight.</p>
+                            </div>
+                            <div className="value-card">
+                                <h3 className="value-title">Community Engagement</h3>
+                                <p>We actively support and engage with our local community through various initiatives,
+                                    partnerships, and events.</p>
+                            </div>
+                        </div>
                     </section>
                     <section className="reviews">
-                        <section className="news-part">
-                            <div className="revs-text">Reviews of the resaurant</div><hr/>
-                        </section>
-
-                            <section className="rev">
-
-                        <div className="rev1">
-                            <div className="rev-title"> </div>
-                            <div className="rev-text"></div>
-                            <img src="url" alt="person"/>
-
+                        <div className="reviews-header">
+                            <h2 className="reviews-title">Reviews of the restaurant</h2>
+                            <hr/>
                         </div>
-                        <div className="rev1">
-                            <div className="rev-title"> </div>
-                            <div className="rev-text"></div>
-                            <img src="url" alt="person"/>
-
+                        <div className="reviews-container">
+                            {reviews.map((review, index) => (
+                                <div key={index} className="review-card">
+                                    <div className="review-content">
+                                        <div className="review-name">{review.name}</div>
+                                        <div className="review-rating">{review.rating}</div>
+                                        <div className="review-text">{review.review}</div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="rev1">
-                            <div className="rev-name">Emily Carter</div>
-
-
-
-
-                            <div className="rev-text"> Rating: 5/5
-                                Review: "Absolutely loved the variety on the menu! The chicken burger was incredibly juicy and flavorful. The staff was super friendly and efficient. Will definitely be coming back for more!"
-                            </div>
-
-                        </div></section>
-
                     </section>
                 </section>
             </main>

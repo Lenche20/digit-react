@@ -45,7 +45,8 @@ h2 {
 
 @media screen and (min-width: 992px) {
     .section-centar {
-        width: 90vw; grid-template-columns: 3fr 1fr;
+        width: 90vw;
+        grid-template-columns: 3fr 1fr;
     }
 }
 
@@ -53,7 +54,6 @@ h2 {
     margin-bottom: var(--content-spacing);
     margin-top: 50px;
 }
-
 
 
 /* section */
@@ -85,10 +85,12 @@ About
     image-resolution: from-image;
 
 }
+
 .title {
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .about-underline {
     width: 5rem;
     height: 0.25rem;
@@ -113,60 +115,9 @@ About
     --card-width: 24rem;
     --card-height: 18rem;
 }
-.mission{
+
+.mission {
     background: #c59d5f;
-    /*height: 200px;*/
-    /*margin: 100px auto;*/
-padding: 50px 150px;
-    align-items: center;
-    justify-items: center;
-    padding-top: 50px;
-    padding-bottom: 70px;
-}
-
-.miss-title{
-    font-size: 50px;
-    color: black;
-    font-weight: bold;
-}
-.miss-text{
-    padding-top: 50px;
-    font-size: 20px;
-    color: black;
- }
-
-.values-text{
-    grid-template-columns: 3fr 1fr;
-    display: flex;
-    width: 1200px;
-    margin: 50px auto;
-    align-items: center;
-    justify-items: center;
-}
-.val{
-width: 400px;
-    border: 1px solid #ccc; /* Gray border color */
-    border-radius: 5px; /* 5px border radius */
-    padding: 30px;
-    align-items: center;
-    justify-items: center;
-    margin: 50px 20px;
-    height: 170px;
-}
-.values-title{
-    padding-top: 70px;
-    font-size: 50px;
-    font-weight: bold;
-}
-.val-title{
-    padding: 10px;
-    font-size: 20px;
-    color: #c59d5f;
-}
-
-.values{
-    background: black;
-    margin-top: -20px;
     /*height: 200px;*/
     /*margin: 100px auto;*/
     padding: 50px 150px;
@@ -176,11 +127,104 @@ width: 400px;
     padding-bottom: 70px;
 }
 
+.miss-title {
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+.miss-text {
+    padding-top: 50px;
+    font-size: 20px;
+    color: black;
+}
+
+/* ValuesSection.css */
+.values {
+    background: black;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.values-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.values-title:after {
+    content: '';
+    display: block;
+    width: 50%; /* Control the underline width */
+    height: 3px; /* Control the underline thickness */
+    background-color: #c59d5f; /* Underline color */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px; /* Adjust the position under the text */
+}
+
+.values-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+}
+
+.value-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: calc(33.333% - 4rem); /* Three cards per row minus the gap */
+    min-width: 250px; /* Minimum width of each card */
+    max-width: 300px; /* Maximum width to prevent stretching */
+}
+
+.value-title {
+    font-size: 1.5rem;
+    color: #c59d5f;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .value-card {
+        width: calc(50% - 4rem); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .value-card {
+        width: 100%; /* Full width on very small screens */
+        max-width: none; /* Override the max-width */
+    }
+
+    .values-title:after {
+        width: 80%; /* Longer underline on smaller screens */
+    }
+}
+
 .loc-carousel-container {
     /*position: relative;*/
     position: fixed;
     width: 220px;
-    margin-top: 0 ;
+    margin-top: 0;
     perspective: 1000px;
 }
 
@@ -190,6 +234,7 @@ width: 400px;
     transform-style: preserve-3d;
     animation: rotate360 60s infinite forwards linear;
 }
+
 .loc-carousel__face {
     position: absolute;
     width: 300px;
@@ -198,40 +243,55 @@ width: 400px;
     left: 10px;
     right: 10px;
     background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
     display: flex;
 }
 
 
-
 .loc-carousel__face:nth-child(1) {
     background-image: url("https://imgur.com/O9KRrg8.jpg");
-    transform: rotateY(  0deg) translateZ(430px); }
+    transform: rotateY(0deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(2) {
     background-image: url("https://leskovac.mk/wp-content/uploads/2020/12/tost-so-slanina.jpg");
-    transform: rotateY( 40deg) translateZ(430px); }
+    transform: rotateY(40deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(3) {
     background-image: url("https://imgur.com/GzKtb8f.jpg");
-    transform: rotateY( 80deg) translateZ(430px); }
+    transform: rotateY(80deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(4) {
     background-image: url("https://imgur.com/VEW04uJ.jpg");
-    transform: rotateY(120deg) translateZ(430px); }
+    transform: rotateY(120deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(5) {
     background-image: url("https://imgur.com/ujVRYuQ.jpg");
-    transform: rotateY(160deg) translateZ(430px); }
+    transform: rotateY(160deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(6) {
     background-image: url("https://imgur.com/O9KRrg8.jpg");
-    transform: rotateY(200deg) translateZ(430px); }
+    transform: rotateY(200deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(7) {
     background-image: url("https://imgur.com/46Sec2L.jpg");
-    transform: rotateY(240deg) translateZ(430px); }
+    transform: rotateY(240deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(8) {
     background-image: url("https://imgur.com/GzKtb8f.jpg");
-    transform: rotateY(280deg) translateZ(430px); }
+    transform: rotateY(280deg) translateZ(430px);
+}
+
 .loc-carousel__face:nth-child(9) {
     background-image: url("https://imgur.com/ujVRYuQ.jpg");
-    transform: rotateY(320deg) translateZ(430px); }
-
+    transform: rotateY(320deg) translateZ(430px);
+}
 
 
 @keyframes rotate360 {
@@ -244,9 +304,7 @@ width: 400px;
 }
 
 
-
-
-.about-welcome{
+.about-welcome {
     width: 900px; /* Set the width to 100% of the viewport width */
     max-width: 150rem; /* Adjust the maximum width for responsiveness */
     display: grid;
@@ -255,13 +313,13 @@ width: 400px;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.about-part-1{
+.about-part-1 {
     align-items: center;
     text-align: right;
     font-size: 16px;
 }
 
-.about-title{
+.about-title {
     font-size: 25px;
     font-weight: bold;
     display: block;
@@ -270,40 +328,72 @@ width: 400px;
     color: #c59d5f;
 }
 
-.reviews{
+/* ReviewsSection.css */
+.reviews {
     background: black;
-    margin-top: -20px;
-    padding: 50px 150px;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    padding-bottom: 70px;
 }
 
-.rev{ grid-template-columns: 3fr 1fr;
-    display: flex;
-    width: 1200px;
-    margin: 50px auto;
-    align-items: start;
-    justify-items: start;
+.reviews-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
-.rev1{
-width: 500px;
-    border: 1px solid #ccc; /* Gray border color */
-    border-radius: 5px; /* 5px border radius */
-    padding: 30px;
-    align-items: start;
-    justify-items: left;
-    margin: 0 20px;
-    height: 170px;
+
+.reviews-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 30px;
+}
+
+.review-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
     background-color: #222;
-}
-.revs-text{
-    font-size: 30px;
+    margin: 1rem;
+    flex-basis: calc(33.333% - 2rem); /* Three cards per row with spacing */
     display: flex;
-    margin-left: 200px;
-    margin-bottom: 20px;
-}
-.rev-name{
-    margin-left: -200px;
+    flex-direction: column;
 }
 
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.review-rating {
+    margin-bottom: 0.5rem;
+}
+
+.review-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        flex-basis: 80%; /* Adjust card width for smaller screens */
+    }
+}
