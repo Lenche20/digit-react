@@ -32,25 +32,21 @@ export const OrderProvider = ({ children }) => {
             setSelectedItems([...selectedItems, { ...item, quantity: 1 }]);
         }
     };
-    const removeFromOrder = (itemId:any) => {
+    const removeFromOrder = (itemId:any, quantityToRemove:any) => {
         const updatedItems = selectedItems.map((selectedItem) =>
             // @ts-ignore
             selectedItem.id === itemId
                 // @ts-ignore
-                ? { ...selectedItem, quantity: selectedItem.quantity - 1 }
+                ? { ...selectedItem, quantity: selectedItem.quantity - quantityToRemove }
                 : selectedItem
         );
         // @ts-ignore
         setSelectedItems(updatedItems.filter((item) => item.quantity > 0));
     };
 
-    const clearOrder = () => {
-        setSelectedItems([]);
-    };
-
     return (
         <OrderContext.Provider
-            value={{ selectedItems, addToOrder, removeFromOrder, clearOrder }}
+            value={{ selectedItems, addToOrder, removeFromOrder }}
         >
             {children}
         </OrderContext.Provider>

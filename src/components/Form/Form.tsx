@@ -2,20 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './Form.css';
 import { Link, useLocation } from "react-router-dom";
 
-type CartItem = {
-    id: number;
-    name: string;
-    price: number;
-    quantity: number;
-};
-
 type OrderDetails = {
-    cartItems: CartItem[];
     deliveryOption: 'delivery' | 'pickup';
     paymentOption: 'online' | 'card' | 'cash';
     tipPercentage: number;
     subtotal: number;
-    taxRate: number;
     total: number;
     address: string;
     cardName: string;
@@ -29,12 +20,10 @@ const Form = () => {
     const location = useLocation();
     const totalAmountFromOrder = location.state?.totalAmount || 0;
     const [orderDetails, setOrderDetails] = useState<OrderDetails>({
-        cartItems: [],
         deliveryOption: 'delivery',
         paymentOption: 'online',
         tipPercentage: 0,
         subtotal: 0,
-        taxRate: 0.0875, // 8.75% tax
         total: 0,
         address: '',
         cardName: '',
@@ -45,13 +34,13 @@ const Form = () => {
 
     useEffect(() => {
         const newSubtotal = totalAmountFromOrder;
-        const newTotal = calculateTotal(newSubtotal, orderDetails.tipPercentage, orderDetails.taxRate, orderDetails.deliveryOption);
+        const newTotal = calculateTotal(newSubtotal, orderDetails.tipPercentage, orderDetails.deliveryOption);
         setOrderDetails(prevDetails => ({
             ...prevDetails,
             subtotal: newSubtotal,
             total: newTotal,
         }));
-    }, [orderDetails.tipPercentage, orderDetails.taxRate, orderDetails.deliveryOption, totalAmountFromOrder]);
+    }, [orderDetails.tipPercentage, orderDetails.deliveryOption, totalAmountFromOrder]);
 
     const handleDeliveryOptionChange = (option: 'delivery' | 'pickup') => {
         setOrderDetails(prevDetails => ({
@@ -79,13 +68,11 @@ const Form = () => {
     const calculateTotal = (
         subtotal: number,
         tipPercentage: number,
-        taxRate: number,
         deliveryOption: 'delivery' | 'pickup'
     ): number => {
         const deliveryCharge = deliveryOption === 'delivery' ? 3.00 : 0;
-        const tax = subtotal * taxRate;
         const tip = subtotal * (tipPercentage / 100);
-        return subtotal + tax + tip + deliveryCharge;
+        return subtotal + tip + deliveryCharge;
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>, field: keyof OrderDetails) => {
@@ -93,6 +80,58 @@ const Form = () => {
             ...prevDetails,
             [field]: e.target.value,
         }));
+    };
+
+    const resetOrderDetails = () => {
+        setOrderDetails({
+            deliveryOption: 'delivery',
+            paymentOption: 'online',
+            tipPercentage: 0,
+            subtotal: 0,
+            total: 0,
+            address: '',
+            cardName: '',
+            cardNumber: '',
+            validThru: '',
+            cvv: '',
+        });
+        setTipAmount(0);
+    };
+
+    const handleFinishOrder = () => {
+        if (orderDetails.deliveryOption === 'delivery' && !orderDetails.address.trim()) {
+            alert('Please enter a valid address.');
+            return;
+        }
+
+        if (orderDetails.paymentOption === 'card') {
+            if (!orderDetails.cardName.trim() || !orderDetails.cardNumber.trim() || !orderDetails.validThru.trim() || !orderDetails.cvv.trim()) {
+                alert('Please fill in all the card details.');
+                return;
+            }
+            const cardNumberRegex = /^[0-9]{16}$/;
+            if (!cardNumberRegex.test(orderDetails.cardNumber)) {
+                alert('Please enter a valid 16-digit card number.');
+                return;
+            }
+
+            const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+            if (!expiryRegex.test(orderDetails.validThru)) {
+                alert('Please enter a valid expiry date in MM/YY format.');
+                return;
+            }
+
+            const cvvRegex = /^[0-9]{3}$/;
+            if (!cvvRegex.test(orderDetails.cvv)) {
+                alert('Please enter a valid 3-digit CVV.');
+                return;
+            }
+        }
+
+        resetOrderDetails();
+        //resetOrder();
+
+        alert('Order complete!');
     };
 
     return (
@@ -201,7 +240,7 @@ const Form = () => {
                     <div>Total</div>
                     <div>${(totalAmountFromOrder+((totalAmountFromOrder * orderDetails.tipPercentage)/100)).toFixed(2)}</div>
                 </div>
-                <button className="proceed-button">Finish ordering</button>
+                <button className="proceed-button" onClick={handleFinishOrder}>Finish ordering</button>
                 <Link to="/order">
                     <button className="proceed-button">Back to ordering</button>
                 </Link>

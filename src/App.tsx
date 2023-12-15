@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import Home from './components/Home/Home';
 import Order from './components/Order/Order';
 import Form from './components/Form/Form';
